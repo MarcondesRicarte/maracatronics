@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="navigation.RobotMath"/>
+<fullyQualifiedTypeName name="data.Robot"/>
+<fullyQualifiedTypeName name="simulator.Conection"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="data.Field"/>
+<fullyQualifiedTypeName name="comunication.CameraReader"/>
+</qualifiedTypeNameHistroy>
