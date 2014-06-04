@@ -9,7 +9,7 @@ package data;
 public class Robot {
 	
 	public static final double DIAMETER = 1.7; 
-	public static final double CHARGE = -1;
+	// public static final double CHARGE = -1;
 	
 	private int id;
 	private double x;

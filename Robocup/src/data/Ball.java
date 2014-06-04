@@ -8,7 +8,7 @@ package data;
 
 public class Ball {
 
-	public static double CHARGE = -1;
+	// public static double CHARGE = -1;
 	
 	private float x;
 	private float y;

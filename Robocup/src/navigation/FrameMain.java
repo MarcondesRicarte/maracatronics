@@ -31,7 +31,7 @@ import data.Field;
  
  public class FrameMain /*extends JFrame implements ActionListener*/ {
 	 CameraReader cameraReader = new CameraReader();
-	 Field field = new Field();
+	 Field field = Field.getInstance();
 	 JPanel contentPane;
      BorderLayout borderLayout1 = new BorderLayout();
      JCheckBox virtualforce;
@@ -65,14 +65,14 @@ import data.Field;
  
 
      
-     RobotAlg r;;
+     RobotController r;;
      Thread t = new Thread();
 
      public FrameMain() {
     	 while(true){
-	    	 cameraReader.read(field);
+	    	 cameraReader.read();
 	    	 
-	    	 r = new RobotAlg(field.me[0], field.getOppenent(), field.getBall(),  0.1, 40, 4000, 15);
+	    	 r = new RobotController(field.me[0], field.getOppenent(), field.getBall(),  0.1, 40, 4000, 15);
 	   	 }
     	 //Paint
     	 /*try {
@@ -129,7 +129,7 @@ import data.Field;
            t = new Thread(new Runnable() {
                public void run() {
                    while ((r.x > 1) && (r.y > 1)) {
-                       r.updatePosition();
+                       //r.updatePosition();
                        pnlDraw.repaint();
                        try {
                            Thread.sleep(100);
@@ -143,10 +143,9 @@ import data.Field;
      }
      else if (e.getActionCommand().equals("new")){
        r.x = 0; r.y = 0;
-           r = new RobotAlg(field.me[0], field.getOppenent(), field.getBall(),  0.1, 40, 4000, 15);
+           r = new RobotController(field.me[0], field.getOppenent(), field.getBall(),  0.1, 40, 4000, 15);
            s = new HashSet<Point> ();
          t = new Thread();  
-         r.virtualforce = virtualforce.isSelected();
          pnlDraw.repaint();        
      } else if (e.getActionCommand().equals("pause")){
        t.suspend();
@@ -155,7 +154,7 @@ import data.Field;
      }
      else if (e.getActionCommand().equals("vf")) {
        System.out.println("VIRTUAL FORCE!!");
-       r.virtualforce = !r.virtualforce;
+
      }
    }
  

@@ -9,18 +9,26 @@ package data;
 
 public class Field {
 	
+	private static Field field;
+	
 	public final int ROBOTS = 6;
-
 	private Ball ball;
 	public Robot me [];
 	public Robot oppenent [];
 	
 	
-	public Field(){
+	private Field(){
 		this.ball = new Ball();
 		this.me = new Robot[this.ROBOTS];
 		this.oppenent = new Robot[this.ROBOTS];
 		this.inicialize();
+	}
+	
+	public static synchronized Field getInstance(){
+		if(field == null){
+			field = new Field();
+		}
+		return field;
 	}
 	
 	public void inicialize(){
