@@ -15,8 +15,9 @@ public class CameraReader {
 	
 	public final int PORT = 10020; 
 	
-	public void read(Field field){
-		 String msg = "Hello";
+	public void read(){
+		Field field = Field.getInstance(); 
+		String msg = "Hello";
 		 InetAddress group;
 //		 while(true){
 			 try {
@@ -29,7 +30,7 @@ public class CameraReader {
 			 
 			 s.send(hi);
 			 // get their responses!
-			 byte[] buf = new byte[1000];
+			 byte[] buf = new byte[1000]; // verificar se isto é eficiente.
 			 DatagramPacket recv = new DatagramPacket(buf, buf.length);
 			 s.receive(recv);
 			 //System.out.println(s)
@@ -60,11 +61,6 @@ public class CameraReader {
 			 }
 	}
 	
-	
-	public static void main(String[] args) {
-		CameraReader cr = new CameraReader();
-		Field field = new Field();
-		cr.read(field);		
-	}
+
 	
 }
