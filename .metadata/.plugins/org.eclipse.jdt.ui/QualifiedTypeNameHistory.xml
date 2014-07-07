@@ -3,7 +3,12 @@
 <fullyQualifiedTypeName name="navigation.RobotMath"/>
 <fullyQualifiedTypeName name="data.Robot"/>
 <fullyQualifiedTypeName name="simulator.Conection"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="data.Field"/>
 <fullyQualifiedTypeName name="comunication.CameraReader"/>
+<fullyQualifiedTypeName name="javax.swing.text.html.HTMLEditorKit.Parser"/>
+<fullyQualifiedTypeName name="parser.ParserControl"/>
+<fullyQualifiedTypeName name="data.Vetorial"/>
+<fullyQualifiedTypeName name="data.Wheels"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
 </qualifiedTypeNameHistroy>
