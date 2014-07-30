@@ -1,0 +1,297 @@
+24 Jul 2014 12:30:17,237 DEBUG [main|SumatraModel] new user file created
+24 Jul 2014 12:30:22,327 DEBUG [main|MainPresenter] Loading layout: default.ly
+24 Jul 2014 12:30:22,344 DEBUG [main|MainPresenter] Loaded layout: ./config/gui/default.ly
+24 Jul 2014 12:30:24,356 DEBUG [AWT-EventQueue-0|MessageConnection] New MessageConnection
+24 Jul 2014 12:30:24,482 INFO  [AWT-EventQueue-0|ACallback] subscribed to REGISTRY
+24 Jul 2014 12:30:24,483 INFO  [AWT-EventQueue-0|ACallback] subscribed to AI_REGISTRY
+24 Jul 2014 12:30:24,483 INFO  [AWT-EventQueue-0|ACallback] subscribed to MODULI_REGISTRY
+24 Jul 2014 12:30:24,483 INFO  [AWT-EventQueue-0|ACallback] subscribed to APOLLON_REGISTRY
+24 Jul 2014 12:30:24,483 INFO  [AWT-EventQueue-0|ACallback] subscribed to LACHESIS_REGISTRY
+24 Jul 2014 12:30:24,484 INFO  [AWT-EventQueue-0|ACallback] subscribed to ATHENA_REGISTRY
+24 Jul 2014 12:30:24,484 INFO  [AWT-EventQueue-0|ACallback] subscribed to LOG_REGISTRY
+24 Jul 2014 12:30:24,484 INFO  [AWT-EventQueue-0|ACallback] subscribed to TIMER_REGISTRY
+24 Jul 2014 12:30:24,484 INFO  [AWT-EventQueue-0|ACallback] subscribed to EMERGENCY_REGISTRY
+24 Jul 2014 12:30:24,484 INFO  [AWT-EventQueue-0|ACallback] subscribed to REFEREE_REGISTRY
+24 Jul 2014 12:30:24,484 INFO  [AWT-EventQueue-0|ACallback] subscribed to RCM_REGISTRY
+24 Jul 2014 12:30:24,485 INFO  [AWT-EventQueue-0|ACallback] subscribed to WF_REGISTRY
+24 Jul 2014 12:30:24,485 INFO  [AWT-EventQueue-0|ACallback] subscribed to TEST_REGISTRY
+24 Jul 2014 12:30:24,485 DEBUG [AWT-EventQueue-0|MessageConnection] messaging host: localhost; port: 1883
+24 Jul 2014 12:30:24,587 INFO  [AWT-EventQueue-0|ACallback] subscribed to BOT_ACTION_COMMAND
+24 Jul 2014 12:30:24,587 INFO  [AWT-EventQueue-0|ACallback] subscribed to LIFE_SIGN
+24 Jul 2014 12:30:24,587 INFO  [AWT-EventQueue-0|ACallback] subscribed to AI_CONTROL
+24 Jul 2014 12:30:24,587 INFO  [AWT-EventQueue-0|ACallback] subscribed to AI_CONTROL_STATE
+24 Jul 2014 12:30:24,587 INFO  [AWT-EventQueue-0|ACallback] subscribed to REFEREE_COMMAND
+24 Jul 2014 12:30:24,990 INFO  [AWT-EventQueue-0|ControllerFactory] Controller found: Teclado Padrão PS/2
+24 Jul 2014 12:30:24,990 INFO  [AWT-EventQueue-0|ControllerFactory] Controller found: ELAN PS/2 Port Smart-Pad
+24 Jul 2014 12:30:25,016 INFO  [AWT-EventQueue-0|ControllerFactory] Controller found: Teclado Padrão PS/2
+24 Jul 2014 12:30:25,017 INFO  [AWT-EventQueue-0|ControllerFactory] Controller found: ELAN PS/2 Port Smart-Pad
+24 Jul 2014 12:30:26,378 INFO  [AWT-EventQueue-0|RCMPresenter] 2 controllers found.
+24 Jul 2014 12:30:35,228 INFO  [ModuliStateChanged|SSLVisionCam] No nif for vision-cam specified, will try all.
+24 Jul 2014 12:30:35,279 INFO  [ModuliStateChanged|RefereeReceiver] No nif for referee specified, will try all.
+24 Jul 2014 12:30:35,554 DEBUG [ModuliStateChanged|ToolbarPresenter] Loaded config: moduli_sim.xml
+24 Jul 2014 12:30:35,642 DEBUG [Dormouse|Dormouse] Dormouse started...
+24 Jul 2014 12:30:36,103 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Found 67 network interfaces
+24 Jul 2014 12:30:36,371 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Using network interface: Software Loopback Interface 1 with MTU 1500
+24 Jul 2014 12:30:36,375 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Multicast group joined
+24 Jul 2014 12:30:36,376 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: WAN Miniport (SSTP)
+24 Jul 2014 12:30:36,376 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: WAN Miniport (L2TP)
+24 Jul 2014 12:30:36,376 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: WAN Miniport (PPTP)
+24 Jul 2014 12:30:36,376 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: WAN Miniport (PPPOE)
+24 Jul 2014 12:30:36,376 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: WAN Miniport (IPv6)
+24 Jul 2014 12:30:36,376 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: WAN Miniport (Network Monitor)
+24 Jul 2014 12:30:36,377 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: WAN Miniport (IP)
+24 Jul 2014 12:30:36,377 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: RAS Async Adapter
+24 Jul 2014 12:30:36,377 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: WAN Miniport (IKEv2)
+24 Jul 2014 12:30:36,377 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Realtek PCIe GBE Family Controller
+24 Jul 2014 12:30:36,652 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Using network interface: Intel(R) Centrino(R) Advanced-N 6230 with MTU 1500
+24 Jul 2014 12:30:36,938 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Multicast group joined
+24 Jul 2014 12:30:36,938 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Microsoft Virtual WiFi Miniport Adapter
+24 Jul 2014 12:30:36,938 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Bluetooth Device (Personal Area Network)
+24 Jul 2014 12:30:36,938 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Bluetooth Device (RFCOMM Protocol TDI)
+24 Jul 2014 12:30:36,938 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Microsoft Virtual WiFi Miniport Adapter #2
+24 Jul 2014 12:30:36,939 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Teredo Tunneling Pseudo-Interface
+24 Jul 2014 12:30:36,939 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Teredo Tunneling Pseudo-Interface
+24 Jul 2014 12:30:36,939 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Miniporta de rede remota (Monitor de rede) - Deterministic Network Enhancer Miniport
+24 Jul 2014 12:30:36,939 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Miniporta de rede remota (IP) - Deterministic Network Enhancer Miniport
+24 Jul 2014 12:30:36,939 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Microsoft Virtual WiFi Miniport Adapter #2 - Deterministic Network Enhancer Miniport
+24 Jul 2014 12:30:36,939 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Adaptador de Miniporta WiFi Virtual da Microsoft - Deterministic Network Enhancer Miniport
+24 Jul 2014 12:30:36,939 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Intel(R) Centrino(R) Advanced-N 6230 - Deterministic Network Enhancer Miniport
+24 Jul 2014 12:30:36,940 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Realtek PCIe GBE Family Controller - Deterministic Network Enhancer Miniport
+24 Jul 2014 12:30:36,940 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Cisco Systems VPN Adapter for 64-bit Windows
+24 Jul 2014 12:30:36,940 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Cisco Systems VPN Adapter for 64-bit Windows - Deterministic Network Enhancer Miniport
+24 Jul 2014 12:30:36,940 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: HUAWEI Mobile Connect - Network Card
+24 Jul 2014 12:30:36,940 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: SAMSUNG Mobile USB Remote NDIS Network Device
+24 Jul 2014 12:30:36,940 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: SAMSUNG Mobile USB Remote NDIS Network Device - Deterministic Network Enhancer Miniport
+24 Jul 2014 12:30:36,940 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: SAMSUNG Mobile USB Remote NDIS Network Device #2
+24 Jul 2014 12:30:36,941 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: SAMSUNG Mobile USB Remote NDIS Network Device #2 - Deterministic Network Enhancer Miniport
+24 Jul 2014 12:30:36,941 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Adaptador do Microsoft ISATAP #5
+24 Jul 2014 12:30:36,941 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Adaptador do Microsoft ISATAP #2
+24 Jul 2014 12:30:36,941 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Adaptador do Microsoft ISATAP
+24 Jul 2014 12:30:36,941 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Adaptador do Microsoft ISATAP #3
+24 Jul 2014 12:30:36,941 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Adaptador do Microsoft 6to4
+24 Jul 2014 12:30:36,942 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Adaptador do Microsoft ISATAP #4
+24 Jul 2014 12:30:36,942 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Adaptador do Microsoft ISATAP #6
+24 Jul 2014 12:30:36,942 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Adaptador do Microsoft ISATAP #7
+24 Jul 2014 12:30:36,942 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Adaptador do Microsoft ISATAP #8
+24 Jul 2014 12:30:37,213 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Using network interface: VirtualBox Host-Only Ethernet Adapter with MTU 1500
+24 Jul 2014 12:30:37,831 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Multicast group joined
+24 Jul 2014 12:30:37,832 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: VirtualBox Host-Only Ethernet Adapter - Deterministic Network Enhancer Miniport
+24 Jul 2014 12:30:37,832 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: SAMSUNG Mobile USB Remote NDIS Network Device #2 - VirtualBox Bridged Networking Driver Miniport
+24 Jul 2014 12:30:37,849 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: SAMSUNG Mobile USB Remote NDIS Network Device - VirtualBox Bridged Networking Driver Miniport
+24 Jul 2014 12:30:37,849 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Cisco Systems VPN Adapter for 64-bit Windows - VirtualBox Bridged Networking Driver Miniport
+24 Jul 2014 12:30:37,849 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Microsoft Virtual WiFi Miniport Adapter #2 - VirtualBox Bridged Networking Driver Miniport
+24 Jul 2014 12:30:37,850 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Adaptador de Miniporta WiFi Virtual da Microsoft - VirtualBox Bridged Networking Driver Miniport
+24 Jul 2014 12:30:37,850 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Realtek PCIe GBE Family Controller - VirtualBox Bridged Networking Driver Miniport
+24 Jul 2014 12:30:37,850 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Intel(R) Centrino(R) Advanced-N 6230 - VirtualBox Bridged Networking Driver Miniport
+24 Jul 2014 12:30:37,850 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Intel(R) Centrino(R) Advanced-N 6230-Virtual WiFi Filter Driver-0000
+24 Jul 2014 12:30:37,850 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Adaptador de Miniporta WiFi Virtual da Microsoft - VirtualBox Bridged Networking Driver Miniport-QoS Packet Scheduler-0000
+24 Jul 2014 12:30:37,850 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Adaptador de Miniporta WiFi Virtual da Microsoft - VirtualBox Bridged Networking Driver Miniport-WFP LightWeight Filter-0000
+24 Jul 2014 12:30:37,850 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+24 Jul 2014 12:30:37,851 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Intel(R) Centrino(R) Advanced-N 6230 - VirtualBox Bridged Networking Driver Miniport-QoS Packet Scheduler-0000
+24 Jul 2014 12:30:37,851 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Intel(R) Centrino(R) Advanced-N 6230 - VirtualBox Bridged Networking Driver Miniport-WFP LightWeight Filter-0000
+24 Jul 2014 12:30:37,851 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Microsoft Virtual WiFi Miniport Adapter #2 - VirtualBox Bridged Networking Driver Miniport-QoS Packet Scheduler-0000
+24 Jul 2014 12:30:37,851 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Microsoft Virtual WiFi Miniport Adapter #2 - VirtualBox Bridged Networking Driver Miniport-WFP LightWeight Filter-0000
+24 Jul 2014 12:30:37,852 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Intel(R) Centrino(R) Advanced-N 6230-Native WiFi Filter Driver-0000
+24 Jul 2014 12:30:37,852 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Realtek PCIe GBE Family Controller - VirtualBox Bridged Networking Driver Miniport-QoS Packet Scheduler-0000
+24 Jul 2014 12:30:37,852 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Realtek PCIe GBE Family Controller - VirtualBox Bridged Networking Driver Miniport-WFP LightWeight Filter-0000
+24 Jul 2014 12:30:37,852 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Microsoft Virtual WiFi Miniport Adapter-Native WiFi Filter Driver-0000
+24 Jul 2014 12:30:37,852 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Miniporta de rede remota (Monitor de rede) - Deterministic Network Enhancer Miniport-QoS Packet Scheduler-0000
+24 Jul 2014 12:30:37,852 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: VirtualBox Host-Only Ethernet Adapter - Deterministic Network Enhancer Miniport-QoS Packet Scheduler-0000
+24 Jul 2014 12:30:37,852 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Microsoft Virtual WiFi Miniport Adapter #2-Native WiFi Filter Driver-0000
+24 Jul 2014 12:30:37,853 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: VirtualBox Host-Only Ethernet Adapter - Deterministic Network Enhancer Miniport-WFP LightWeight Filter-0000
+24 Jul 2014 12:30:37,853 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Miniporta de rede remota (IP) - Deterministic Network Enhancer Miniport-QoS Packet Scheduler-0000
+24 Jul 2014 12:30:37,995 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: VIVO
+24 Jul 2014 12:30:38,409 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Found 67 network interfaces
+24 Jul 2014 12:30:38,684 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Using network interface: Software Loopback Interface 1 with MTU 1500
+24 Jul 2014 12:30:38,684 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Multicast group joined
+24 Jul 2014 12:30:38,684 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: WAN Miniport (SSTP)
+24 Jul 2014 12:30:38,684 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: WAN Miniport (L2TP)
+24 Jul 2014 12:30:38,684 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: WAN Miniport (PPTP)
+24 Jul 2014 12:30:38,685 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: WAN Miniport (PPPOE)
+24 Jul 2014 12:30:38,685 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: WAN Miniport (IPv6)
+24 Jul 2014 12:30:38,685 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: WAN Miniport (Network Monitor)
+24 Jul 2014 12:30:38,685 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: WAN Miniport (IP)
+24 Jul 2014 12:30:38,685 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: RAS Async Adapter
+24 Jul 2014 12:30:38,685 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: WAN Miniport (IKEv2)
+24 Jul 2014 12:30:38,685 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Realtek PCIe GBE Family Controller
+24 Jul 2014 12:30:38,955 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Using network interface: Intel(R) Centrino(R) Advanced-N 6230 with MTU 1500
+24 Jul 2014 12:30:39,227 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Multicast group joined
+24 Jul 2014 12:30:39,227 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Microsoft Virtual WiFi Miniport Adapter
+24 Jul 2014 12:30:39,227 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Bluetooth Device (Personal Area Network)
+24 Jul 2014 12:30:39,227 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Bluetooth Device (RFCOMM Protocol TDI)
+24 Jul 2014 12:30:39,227 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Microsoft Virtual WiFi Miniport Adapter #2
+24 Jul 2014 12:30:39,227 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Teredo Tunneling Pseudo-Interface
+24 Jul 2014 12:30:39,227 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Teredo Tunneling Pseudo-Interface
+24 Jul 2014 12:30:39,227 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Miniporta de rede remota (Monitor de rede) - Deterministic Network Enhancer Miniport
+24 Jul 2014 12:30:39,227 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Miniporta de rede remota (IP) - Deterministic Network Enhancer Miniport
+24 Jul 2014 12:30:39,227 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Microsoft Virtual WiFi Miniport Adapter #2 - Deterministic Network Enhancer Miniport
+24 Jul 2014 12:30:39,228 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Adaptador de Miniporta WiFi Virtual da Microsoft - Deterministic Network Enhancer Miniport
+24 Jul 2014 12:30:39,228 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Intel(R) Centrino(R) Advanced-N 6230 - Deterministic Network Enhancer Miniport
+24 Jul 2014 12:30:39,228 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Realtek PCIe GBE Family Controller - Deterministic Network Enhancer Miniport
+24 Jul 2014 12:30:39,228 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Cisco Systems VPN Adapter for 64-bit Windows
+24 Jul 2014 12:30:39,228 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Cisco Systems VPN Adapter for 64-bit Windows - Deterministic Network Enhancer Miniport
+24 Jul 2014 12:30:39,228 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: HUAWEI Mobile Connect - Network Card
+24 Jul 2014 12:30:39,228 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: SAMSUNG Mobile USB Remote NDIS Network Device
+24 Jul 2014 12:30:39,228 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: SAMSUNG Mobile USB Remote NDIS Network Device - Deterministic Network Enhancer Miniport
+24 Jul 2014 12:30:39,228 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: SAMSUNG Mobile USB Remote NDIS Network Device #2
+24 Jul 2014 12:30:39,228 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: SAMSUNG Mobile USB Remote NDIS Network Device #2 - Deterministic Network Enhancer Miniport
+24 Jul 2014 12:30:39,228 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Adaptador do Microsoft ISATAP #5
+24 Jul 2014 12:30:39,228 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Adaptador do Microsoft ISATAP #2
+24 Jul 2014 12:30:39,229 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Adaptador do Microsoft ISATAP
+24 Jul 2014 12:30:39,229 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Adaptador do Microsoft ISATAP #3
+24 Jul 2014 12:30:39,229 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Adaptador do Microsoft 6to4
+24 Jul 2014 12:30:39,229 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Adaptador do Microsoft ISATAP #4
+24 Jul 2014 12:30:39,229 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Adaptador do Microsoft ISATAP #6
+24 Jul 2014 12:30:39,229 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Adaptador do Microsoft ISATAP #7
+24 Jul 2014 12:30:39,229 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Adaptador do Microsoft ISATAP #8
+24 Jul 2014 12:30:39,505 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Using network interface: VirtualBox Host-Only Ethernet Adapter with MTU 1500
+24 Jul 2014 12:30:40,122 DEBUG [SSLVisionCam|MulticastUDPReceiver] Socket timed out on iface Software Loopback Interface 1
+24 Jul 2014 12:30:40,147 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Multicast group joined
+24 Jul 2014 12:30:40,147 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: VirtualBox Host-Only Ethernet Adapter - Deterministic Network Enhancer Miniport
+24 Jul 2014 12:30:40,147 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: SAMSUNG Mobile USB Remote NDIS Network Device #2 - VirtualBox Bridged Networking Driver Miniport
+24 Jul 2014 12:30:40,147 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: SAMSUNG Mobile USB Remote NDIS Network Device - VirtualBox Bridged Networking Driver Miniport
+24 Jul 2014 12:30:40,147 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Cisco Systems VPN Adapter for 64-bit Windows - VirtualBox Bridged Networking Driver Miniport
+24 Jul 2014 12:30:40,147 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Microsoft Virtual WiFi Miniport Adapter #2 - VirtualBox Bridged Networking Driver Miniport
+24 Jul 2014 12:30:40,147 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Adaptador de Miniporta WiFi Virtual da Microsoft - VirtualBox Bridged Networking Driver Miniport
+24 Jul 2014 12:30:40,147 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Realtek PCIe GBE Family Controller - VirtualBox Bridged Networking Driver Miniport
+24 Jul 2014 12:30:40,147 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Intel(R) Centrino(R) Advanced-N 6230 - VirtualBox Bridged Networking Driver Miniport
+24 Jul 2014 12:30:40,147 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Intel(R) Centrino(R) Advanced-N 6230-Virtual WiFi Filter Driver-0000
+24 Jul 2014 12:30:40,148 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Adaptador de Miniporta WiFi Virtual da Microsoft - VirtualBox Bridged Networking Driver Miniport-QoS Packet Scheduler-0000
+24 Jul 2014 12:30:40,148 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Adaptador de Miniporta WiFi Virtual da Microsoft - VirtualBox Bridged Networking Driver Miniport-WFP LightWeight Filter-0000
+24 Jul 2014 12:30:40,148 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+24 Jul 2014 12:30:40,148 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Intel(R) Centrino(R) Advanced-N 6230 - VirtualBox Bridged Networking Driver Miniport-QoS Packet Scheduler-0000
+24 Jul 2014 12:30:40,148 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Intel(R) Centrino(R) Advanced-N 6230 - VirtualBox Bridged Networking Driver Miniport-WFP LightWeight Filter-0000
+24 Jul 2014 12:30:40,148 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Microsoft Virtual WiFi Miniport Adapter #2 - VirtualBox Bridged Networking Driver Miniport-QoS Packet Scheduler-0000
+24 Jul 2014 12:30:40,148 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Microsoft Virtual WiFi Miniport Adapter #2 - VirtualBox Bridged Networking Driver Miniport-WFP LightWeight Filter-0000
+24 Jul 2014 12:30:40,148 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Intel(R) Centrino(R) Advanced-N 6230-Native WiFi Filter Driver-0000
+24 Jul 2014 12:30:40,148 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Realtek PCIe GBE Family Controller - VirtualBox Bridged Networking Driver Miniport-QoS Packet Scheduler-0000
+24 Jul 2014 12:30:40,148 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Realtek PCIe GBE Family Controller - VirtualBox Bridged Networking Driver Miniport-WFP LightWeight Filter-0000
+24 Jul 2014 12:30:40,148 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Microsoft Virtual WiFi Miniport Adapter-Native WiFi Filter Driver-0000
+24 Jul 2014 12:30:40,148 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Miniporta de rede remota (Monitor de rede) - Deterministic Network Enhancer Miniport-QoS Packet Scheduler-0000
+24 Jul 2014 12:30:40,148 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: VirtualBox Host-Only Ethernet Adapter - Deterministic Network Enhancer Miniport-QoS Packet Scheduler-0000
+24 Jul 2014 12:30:40,149 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Microsoft Virtual WiFi Miniport Adapter #2-Native WiFi Filter Driver-0000
+24 Jul 2014 12:30:40,149 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: VirtualBox Host-Only Ethernet Adapter - Deterministic Network Enhancer Miniport-WFP LightWeight Filter-0000
+24 Jul 2014 12:30:40,149 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: Miniporta de rede remota (IP) - Deterministic Network Enhancer Miniport-QoS Packet Scheduler-0000
+24 Jul 2014 12:30:40,244 DEBUG [ModuliStateChanged|MulticastUDPReceiver] Filtered network interface: VIVO
+24 Jul 2014 12:30:41,090 ERROR [ModuliStateChanged|OpenClHandler] OpenCL error'd when looking for devices.
+java.lang.UnsatisfiedLinkError: Error while loading native library "JOCL_0_1_9-windows-x86_64" with base name "JOCL_0_1_9"
+Operating system name: Windows 7
+Architecture         : amd64
+Architecture bit size: 64
+---(start of nested stack traces)---
+Stack trace from the attempt to load the library as a file:
+java.lang.UnsatisfiedLinkError: no JOCL_0_1_9-windows-x86_64 in java.library.path
+	at java.lang.ClassLoader.loadLibrary(Unknown Source)
+	at java.lang.Runtime.loadLibrary0(Unknown Source)
+	at java.lang.System.loadLibrary(Unknown Source)
+	at org.jocl.LibUtils.loadLibrary(LibUtils.java:80)
+	at org.jocl.CL.<clinit>(CL.java:47)
+	at edu.dhbw.mannheim.tigers.sumatra.model.data.math.OpenClHandler.<init>(OpenClHandler.java:64)
+	at edu.dhbw.mannheim.tigers.sumatra.model.data.math.OpenClHandler.<clinit>(OpenClHandler.java:37)
+	at edu.dhbw.mannheim.tigers.sumatra.model.modules.impls.ai.metis.calculators.support.RedirectPosRefCalc.<init>(RedirectPosRefCalc.java:62)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at edu.dhbw.mannheim.tigers.sumatra.util.InstanceableClass.newInstance(InstanceableClass.java:64)
+	at edu.dhbw.mannheim.tigers.sumatra.util.InstanceableClass.newDefaultInstance(InstanceableClass.java:101)
+	at edu.dhbw.mannheim.tigers.sumatra.model.modules.impls.ai.metis.Metis.<init>(Metis.java:60)
+	at edu.dhbw.mannheim.tigers.sumatra.model.modules.impls.ai.Agent.startModule(Agent.java:188)
+	at edu.dhbw.mannheim.tigers.moduli.Moduli.startModules(Moduli.java:225)
+	at edu.dhbw.mannheim.tigers.sumatra.presenter.main.ToolbarPresenter$StartStopThread.run(ToolbarPresenter.java:273)
+	at java.lang.Thread.run(Unknown Source)
+Stack trace from the attempt to load the library as a resource:
+java.lang.UnsatisfiedLinkError: Could not initialize native library. Implementation library 'OpenCL.dll' could not be loaded
+	at org.jocl.LibUtils.initNativeLibrary(LibUtils.java:142)
+	at org.jocl.LibUtils.loadLibrary(LibUtils.java:92)
+	at org.jocl.CL.<clinit>(CL.java:47)
+	at edu.dhbw.mannheim.tigers.sumatra.model.data.math.OpenClHandler.<init>(OpenClHandler.java:64)
+	at edu.dhbw.mannheim.tigers.sumatra.model.data.math.OpenClHandler.<clinit>(OpenClHandler.java:37)
+	at edu.dhbw.mannheim.tigers.sumatra.model.modules.impls.ai.metis.calculators.support.RedirectPosRefCalc.<init>(RedirectPosRefCalc.java:62)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at edu.dhbw.mannheim.tigers.sumatra.util.InstanceableClass.newInstance(InstanceableClass.java:64)
+	at edu.dhbw.mannheim.tigers.sumatra.util.InstanceableClass.newDefaultInstance(InstanceableClass.java:101)
+	at edu.dhbw.mannheim.tigers.sumatra.model.modules.impls.ai.metis.Metis.<init>(Metis.java:60)
+	at edu.dhbw.mannheim.tigers.sumatra.model.modules.impls.ai.Agent.startModule(Agent.java:188)
+	at edu.dhbw.mannheim.tigers.moduli.Moduli.startModules(Moduli.java:225)
+	at edu.dhbw.mannheim.tigers.sumatra.presenter.main.ToolbarPresenter$StartStopThread.run(ToolbarPresenter.java:273)
+	at java.lang.Thread.run(Unknown Source)
+---(end of nested stack traces)---
+
+	at org.jocl.LibUtils.loadLibrary(LibUtils.java:122)
+	at org.jocl.CL.<clinit>(CL.java:47)
+	at edu.dhbw.mannheim.tigers.sumatra.model.data.math.OpenClHandler.<init>(OpenClHandler.java:64)
+	at edu.dhbw.mannheim.tigers.sumatra.model.data.math.OpenClHandler.<clinit>(OpenClHandler.java:37)
+	at edu.dhbw.mannheim.tigers.sumatra.model.modules.impls.ai.metis.calculators.support.RedirectPosRefCalc.<init>(RedirectPosRefCalc.java:62)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at edu.dhbw.mannheim.tigers.sumatra.util.InstanceableClass.newInstance(InstanceableClass.java:64)
+	at edu.dhbw.mannheim.tigers.sumatra.util.InstanceableClass.newDefaultInstance(InstanceableClass.java:101)
+	at edu.dhbw.mannheim.tigers.sumatra.model.modules.impls.ai.metis.Metis.<init>(Metis.java:60)
+	at edu.dhbw.mannheim.tigers.sumatra.model.modules.impls.ai.Agent.startModule(Agent.java:188)
+	at edu.dhbw.mannheim.tigers.moduli.Moduli.startModules(Moduli.java:225)
+	at edu.dhbw.mannheim.tigers.sumatra.presenter.main.ToolbarPresenter$StartStopThread.run(ToolbarPresenter.java:273)
+	at java.lang.Thread.run(Unknown Source)
+24 Jul 2014 12:30:42,336 DEBUG [SSLVisionCam|MulticastUDPReceiver] Socket timed out on iface Intel(R) Centrino(R) Advanced-N 6230
+24 Jul 2014 12:30:42,370 DEBUG [Referee|MulticastUDPReceiver] Socket timed out on iface Software Loopback Interface 1
+24 Jul 2014 12:30:42,633 INFO  [AutoCharge|GenericManager] Auto charging bots
+24 Jul 2014 12:30:44,583 DEBUG [Referee|MulticastUDPReceiver] Socket timed out on iface Intel(R) Centrino(R) Advanced-N 6230
+24 Jul 2014 12:30:44,727 DEBUG [SSLVisionCam|MulticastUDPReceiver] Socket timed out on iface VirtualBox Host-Only Ethernet Adapter
+24 Jul 2014 12:30:46,884 DEBUG [Referee|MulticastUDPReceiver] Socket timed out on iface VirtualBox Host-Only Ethernet Adapter
+24 Jul 2014 12:31:22,358 DEBUG [AWT-EventQueue-0|MainPresenter] Saved configuration to: .\config\user\Marcondes Ricarte.props
+24 Jul 2014 12:31:22,359 DEBUG [AWT-EventQueue-0|MulticastUDPReceiver] Multicast group left
+24 Jul 2014 12:31:22,360 DEBUG [AWT-EventQueue-0|MulticastUDPReceiver] Socket closed
+24 Jul 2014 12:31:22,360 DEBUG [AWT-EventQueue-0|MulticastUDPReceiver] Multicast group left
+24 Jul 2014 12:31:22,361 DEBUG [AWT-EventQueue-0|MulticastUDPReceiver] Socket closed
+24 Jul 2014 12:31:22,361 DEBUG [AWT-EventQueue-0|MulticastUDPReceiver] Multicast group left
+24 Jul 2014 12:31:22,361 DEBUG [AWT-EventQueue-0|MulticastUDPReceiver] Socket closed
+24 Jul 2014 12:31:22,362 DEBUG [AWT-EventQueue-0|MulticastUDPReceiver] Multicast group left
+24 Jul 2014 12:31:22,362 DEBUG [AWT-EventQueue-0|MulticastUDPReceiver] Socket closed
+24 Jul 2014 12:31:22,363 DEBUG [AWT-EventQueue-0|MulticastUDPReceiver] Multicast group left
+24 Jul 2014 12:31:22,363 DEBUG [AWT-EventQueue-0|MulticastUDPReceiver] Socket closed
+24 Jul 2014 12:31:22,363 DEBUG [AWT-EventQueue-0|MulticastUDPReceiver] Multicast group left
+24 Jul 2014 12:31:22,364 DEBUG [AWT-EventQueue-0|MulticastUDPReceiver] Socket closed
+24 Jul 2014 12:31:22,480 DEBUG [Dormouse|Dormouse] Dormouse stopped.
+24 Jul 2014 12:31:22,480 DEBUG [WP_Director|Director] Interrupted while waiting for new CamDetectionFrame.
+30 Jul 2014 14:45:16,596 DEBUG [main|MainPresenter] Loading layout: last.ly
+30 Jul 2014 14:45:16,742 DEBUG [main|MainPresenter] Loaded layout: ./config/gui/last.ly
+30 Jul 2014 14:45:16,742 DEBUG [main|MainPresenter] Loading look and feel: Windows
+30 Jul 2014 15:14:54,566 DEBUG [AWT-EventQueue-0|MainPresenter] Saved configuration to: .\config\user\Marcondes Ricarte.props
+30 Jul 2014 17:58:54,347 DEBUG [main|MainPresenter] Loading layout: last.ly
+30 Jul 2014 17:58:54,367 DEBUG [main|MainPresenter] Loaded layout: ./config/gui/last.ly
+30 Jul 2014 17:58:54,368 DEBUG [main|MainPresenter] Loading look and feel: Windows
+30 Jul 2014 17:59:09,715 DEBUG [AWT-EventQueue-0|MessageConnection] New MessageConnection
+30 Jul 2014 17:59:09,873 INFO  [AWT-EventQueue-0|ACallback] subscribed to REGISTRY
+30 Jul 2014 17:59:09,873 INFO  [AWT-EventQueue-0|ACallback] subscribed to AI_REGISTRY
+30 Jul 2014 17:59:09,873 INFO  [AWT-EventQueue-0|ACallback] subscribed to MODULI_REGISTRY
+30 Jul 2014 17:59:09,873 INFO  [AWT-EventQueue-0|ACallback] subscribed to APOLLON_REGISTRY
+30 Jul 2014 17:59:09,873 INFO  [AWT-EventQueue-0|ACallback] subscribed to LACHESIS_REGISTRY
+30 Jul 2014 17:59:09,874 INFO  [AWT-EventQueue-0|ACallback] subscribed to ATHENA_REGISTRY
+30 Jul 2014 17:59:09,874 INFO  [AWT-EventQueue-0|ACallback] subscribed to LOG_REGISTRY
+30 Jul 2014 17:59:09,874 INFO  [AWT-EventQueue-0|ACallback] subscribed to TIMER_REGISTRY
+30 Jul 2014 17:59:09,874 INFO  [AWT-EventQueue-0|ACallback] subscribed to EMERGENCY_REGISTRY
+30 Jul 2014 17:59:09,874 INFO  [AWT-EventQueue-0|ACallback] subscribed to REFEREE_REGISTRY
+30 Jul 2014 17:59:09,874 INFO  [AWT-EventQueue-0|ACallback] subscribed to RCM_REGISTRY
+30 Jul 2014 17:59:09,874 INFO  [AWT-EventQueue-0|ACallback] subscribed to WF_REGISTRY
+30 Jul 2014 17:59:09,874 INFO  [AWT-EventQueue-0|ACallback] subscribed to TEST_REGISTRY
+30 Jul 2014 17:59:09,875 DEBUG [AWT-EventQueue-0|MessageConnection] messaging host: localhost; port: 1883
+30 Jul 2014 17:59:10,067 INFO  [AWT-EventQueue-0|ACallback] subscribed to BOT_ACTION_COMMAND
+30 Jul 2014 17:59:10,067 INFO  [AWT-EventQueue-0|ACallback] subscribed to LIFE_SIGN
+30 Jul 2014 17:59:10,067 INFO  [AWT-EventQueue-0|ACallback] subscribed to AI_CONTROL
+30 Jul 2014 17:59:10,067 INFO  [AWT-EventQueue-0|ACallback] subscribed to AI_CONTROL_STATE
+30 Jul 2014 17:59:10,068 INFO  [AWT-EventQueue-0|ACallback] subscribed to REFEREE_COMMAND
+30 Jul 2014 17:59:11,165 INFO  [AWT-EventQueue-0|ControllerFactory] Controller found: Teclado Padrão PS/2
+30 Jul 2014 17:59:11,165 INFO  [AWT-EventQueue-0|ControllerFactory] Controller found: ELAN PS/2 Port Smart-Pad
+30 Jul 2014 17:59:11,227 INFO  [AWT-EventQueue-0|ControllerFactory] Controller found: Teclado Padrão PS/2
+30 Jul 2014 17:59:11,227 INFO  [AWT-EventQueue-0|ControllerFactory] Controller found: ELAN PS/2 Port Smart-Pad
+30 Jul 2014 17:59:14,813 INFO  [AWT-EventQueue-0|RCMPresenter] 2 controllers found.
+30 Jul 2014 17:59:45,774 DEBUG [AWT-EventQueue-0|MainPresenter] Saved configuration to: .\config\user\Marcondes Ricarte.props
+30 Jul 2014 18:15:07,613 DEBUG [main|MainPresenter] Loading layout: last.ly
+30 Jul 2014 18:15:07,615 DEBUG [main|MainPresenter] Loaded layout: ./config/gui/last.ly
+30 Jul 2014 18:15:07,615 DEBUG [main|MainPresenter] Loading look and feel: Windows
+30 Jul 2014 18:15:48,229 DEBUG [AWT-EventQueue-0|MainPresenter] Saved configuration to: .\config\user\Marcondes Ricarte.props
