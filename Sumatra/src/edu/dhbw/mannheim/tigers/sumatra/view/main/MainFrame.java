@@ -492,8 +492,8 @@ public class MainFrame extends JFrame implements IMainFrame
 		setLayout(new BorderLayout());
 		// this.setLocation(0, 0);
 		this.setSize(new Dimension(800, 600));
-		setTitle("Tigers Mannheim - Sumatra V " + SumatraModel.getVersion());
-		URL kralleUrl = ClassLoader.getSystemResource("kralle-icon.png");
+		setTitle("Maracatronics V " + SumatraModel.getVersion());
+		URL kralleUrl = ClassLoader.getSystemResource("icon.png");
 		if (kralleUrl != null)
 		{
 			ImageIcon icon = new ImageIcon(kralleUrl);

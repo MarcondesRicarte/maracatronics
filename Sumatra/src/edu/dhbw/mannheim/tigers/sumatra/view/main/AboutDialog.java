@@ -56,13 +56,13 @@ public class AboutDialog extends JDialog
 				(int) (screenDimension.getHeight() - getHeight()) / 2);
 		
 		// --- heading ---
-		JLabel heading = new JLabel("Tigers Mannheim - Sumatra", SwingConstants.CENTER);
+		JLabel heading = new JLabel("Maracatronics", SwingConstants.CENTER);
 		heading.setFont(new Font("Dialog", Font.BOLD, 15));
 		this.add(heading, BorderLayout.NORTH);
 		
 		// --- logo ---
 		JLabel logo = new JLabel();
-		ImageIcon iconNormal = new ImageIcon(classLoader.getResource("tigerIcon.png"));
+		ImageIcon iconNormal = new ImageIcon(classLoader.getResource("logo.png"));
 		ImageIcon iconSmall = new ImageIcon(iconNormal.getImage().getScaledInstance(200, 200, Image.SCALE_DEFAULT));
 		logo.setPreferredSize(new Dimension(300, 250));
 		logo.setIcon(iconSmall);
@@ -72,8 +72,9 @@ public class AboutDialog extends JDialog
 		
 		// --- text ---
 		JLabel text = new JLabel();
-		text.setText("<html>Version: " + SumatraModel.getVersion() + "<br>" + "Team: Tigers Mannheim<br>"
-				+ "University: DHBW Mannheim<br>" + "Date: July 2009 - today" + "</html>");
+		text.setText("<html>Version: " + SumatraModel.getVersion() + "<br>" + "Team: Maracatronics<br>"
+				+ "University: Federal University of Pernambuco<br>" + "Date: Fev 2014 - today<br>"
+				+ "Based in Tigers Mannheim - Sumatra" + "</html>");
 		this.add(text, BorderLayout.SOUTH);
 		
 	}

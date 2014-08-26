@@ -4,7 +4,6 @@
  * Project: TIGERS - Sumatra
  * Date: 22.07.2010
  * Author(s): Gero
- * 
  * *********************************************************
  */
 package edu.dhbw.mannheim.tigers.sumatra.model.modules.impls.cam;
@@ -44,7 +43,6 @@ import edu.dhbw.mannheim.tigers.sumatra.util.network.NetworkUtility;
  * certain port (and multicast-group)
  * 
  * @author Gero
- * 
  */
 public class SSLVisionCam extends ACam implements Runnable, IReceiver, ITeamConfigObserver
 {
@@ -92,11 +90,11 @@ public class SSLVisionCam extends ACam implements Runnable, IReceiver, ITeamConf
 	/**
 	 * @param subnodeConfiguration
 	 */
-	public SSLVisionCam(SubnodeConfiguration subnodeConfiguration)
+	public SSLVisionCam(final SubnodeConfiguration subnodeConfiguration)
 	{
-		port = subnodeConfiguration.getInt("port");
-		address = subnodeConfiguration.getString("address");
-		final String network = subnodeConfiguration.getString("interface");
+		port = 10020; // subnodeConfiguration.getInt("port");
+		address = "127.0.0.1"; // subnodeConfiguration.getString(/* "address" */);
+		final String network = "127.0.0.1"; // subnodeConfiguration.getString("interface");
 		
 		TeamConfig.getInstance().addObserver(this);
 		
@@ -270,7 +268,7 @@ public class SSLVisionCam extends ACam implements Runnable, IReceiver, ITeamConf
 					
 					// TODO Gero:GeometryFrame??? (Gero) consumer.onNewCamGeometryFrame(frame);
 					
-					geometryObservable.notifyObservers(frame);
+					// geometryObservable.notifyObservers(frame); TODO verificar proque está dando erro.
 				}
 				
 			} catch (final IOException err)
@@ -289,14 +287,14 @@ public class SSLVisionCam extends ACam implements Runnable, IReceiver, ITeamConf
 	
 	
 	@Override
-	public DatagramPacket receive(DatagramPacket store) throws IOException
+	public DatagramPacket receive(final DatagramPacket store) throws IOException
 	{
 		return receiver.receive(store);
 	}
 	
 	
 	@Override
-	public void onNewTeamConfig(TeamProps teamProps)
+	public void onNewTeamConfig(final TeamProps teamProps)
 	{
 		synchronized (teampPropsSync)
 		{
