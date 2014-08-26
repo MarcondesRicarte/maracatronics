@@ -149,7 +149,7 @@ public class ReplayWindow extends JFrame implements IReplayControlPanelObserver
 		
 		setTitle("Replay");
 		setLayout(new BorderLayout());
-		setIconImage(new ImageIcon(ClassLoader.getSystemResource("kralle-icon.png")).getImage());
+		setIconImage(new ImageIcon(ClassLoader.getSystemResource("icon.png")).getImage());
 		addWindowListener(new MyWindowListener());
 		setPreferredSize(new Dimension(WINDOW_WIDTH, WINDOW_HEIGHT));
 		

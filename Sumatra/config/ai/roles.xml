@@ -2,7 +2,7 @@
 <roles base="edu.dhbw.mannheim.tigers.sumatra.model.modules.impls.ai.pandora.roles">
     <defense>
         <DefenderRole>
-            <marginDefenseArea comment="">300.0</marginDefenseArea>
+            <marginDefenseArea comment="">200.0</marginDefenseArea>
             <chipKickLength comment="">1000.0</chipKickLength>
         </DefenderRole>
         <KeeperRole>
@@ -24,18 +24,21 @@
             <showDebugInformations comment="">false</showDebugInformations>
         </AOffensiveRole>
     </offense>
+    <SupportRole>
+        <shootSpeed comment="">4.0</shootSpeed>
+    </SupportRole>
     <test>
+        <ChipKickTrainerV2Role>
+            <waitingTime comment="Time [ms] to wait before doing the chipkick">1500</waitingTime>
+            <dist2Ball comment="Dist [mm] to ball in prepare state">121.5</dist2Ball>
+            <ballAtDestTol comment="Dist [mm] to ball when it is considered to be at its destination">80.0</ballAtDestTol>
+        </ChipKickTrainerV2Role>
         <StraightKickTrainerRole>
             <waitingTime comment="Time [ms] to wait before doing the kick">300</waitingTime>
             <dist2Ball comment="Dist [mm] to ball in prepare state">121.5</dist2Ball>
             <ballAtDestTol comment="Dist [mm] to ball when it is considered to be at its destination">50.0</ballAtDestTol>
             <ballMovingVelTol comment="Velocity tolerance [m/s] when the ball is considered to be moving">0.1</ballMovingVelTol>
         </StraightKickTrainerRole>
-        <ChipKickTrainerV2Role>
-            <waitingTime comment="Time [ms] to wait before doing the chipkick">1500</waitingTime>
-            <dist2Ball comment="Dist [mm] to ball in prepare state">121.5</dist2Ball>
-            <ballAtDestTol comment="Dist [mm] to ball when it is considered to be at its destination">80.0</ballAtDestTol>
-        </ChipKickTrainerV2Role>
     </test>
     <move>
         <MoveBallToRole>
