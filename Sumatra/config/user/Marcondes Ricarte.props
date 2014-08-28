@@ -1,4 +1,4 @@
-#Tue Aug 26 09:52:22 ART 2014
+#Thu Aug 28 20:38:16 ART 2014
 edu.dhbw.mannheim.tigers.sumatra.presenter.main.MainPresenter.h=744
 edu.dhbw.mannheim.tigers.sumatra.model.modules.impls.ai.config.AIConfig.roles=roles.xml
 edu.dhbw.mannheim.tigers.sumatra.model.modules.impls.ai.config.AIConfig.metis=metis.xml
@@ -18,12 +18,15 @@ edu.dhbw.mannheim.tigers.sumatra.presenter.main.MainPresenter.lookAndFeel=com.su
 edu.dhbw.mannheim.tigers.sumatra.model.modules.types.AAgent.team.v2=team_default.xml
 edu.dhbw.mannheim.tigers.sumatra.presenter.main.MainPresenter.maximized=true
 edu.dhbw.mannheim.tigers.sumatra.view.visualizer.internals.OptionsPanel.ERROR_TREE=true
+edu.dhbw.mannheim.tigers.sumatra.view.visualizer.internals.field.FieldPanel.fieldOriginY=-60.0
 edu.dhbw.mannheim.tigers.sumatra.view.visualizer.internals.OptionsPanel.VELOCITY=false
+edu.dhbw.mannheim.tigers.sumatra.view.visualizer.internals.field.FieldPanel.fieldOriginX=-63.0
 edu.dhbw.mannheim.tigers.sumatra.view.visualizer.internals.OptionsPanel.COORDINATES=true
 edu.dhbw.mannheim.tigers.sumatra.model.modules.impls.ai.config.AIConfig.layer=layer.xml
 edu.dhbw.mannheim.tigers.sumatra.view.visualizer.internals.OptionsPanel.YELLOW_AI=true
 edu.dhbw.mannheim.tigers.sumatra.view.visualizer.internals.OptionsPanel.BLUE_AI=false
 edu.dhbw.mannheim.tigers.sumatra.view.visualizer.internals.OptionsPanel.PATTERNS=false
+edu.dhbw.mannheim.tigers.sumatra.view.visualizer.internals.OptionsPanel.SUPPORT_POS=false
 edu.dhbw.mannheim.tigers.sumatra.presenter.main.MainPresenter.disyplayCount=1
 edu.dhbw.mannheim.tigers.sumatra.presenter.main.MainPresenter.layout=last.ly
 edu.dhbw.mannheim.tigers.sumatra.view.visualizer.internals.OptionsPanel.BALL_BUFFER=false
@@ -33,6 +36,7 @@ edu.dhbw.mannheim.tigers.sumatra.view.visualizer.internals.OptionsPanel.TACTICS=
 edu.dhbw.mannheim.tigers.sumatra.model.modules.impls.ai.config.AIConfig.misc=misc.xml
 edu.dhbw.mannheim.tigers.sumatra.view.visualizer.internals.OptionsPanel.ACCELERATION=false
 edu.dhbw.mannheim.tigers.sumatra.model.modules.impls.ai.config.AIConfig.conditions=conditions.xml
+edu.dhbw.mannheim.tigers.sumatra.view.visualizer.internals.OptionsPanel.ANALYSIS_GRID=false
 edu.dhbw.mannheim.tigers.sumatra.model.modules.impls.ai.config.AIConfig.lachesis=lachesis.xml
 edu.dhbw.mannheim.tigers.sumatra.model.modules.impls.ai.config.AIConfig.rcm=rcm.xml
 edu.dhbw.mannheim.tigers.sumatra.model.modules.impls.ai.config.AIConfig.sisyphus=sisyphus.xml
