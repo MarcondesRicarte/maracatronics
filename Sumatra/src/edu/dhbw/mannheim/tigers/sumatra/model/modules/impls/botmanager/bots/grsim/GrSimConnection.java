@@ -4,7 +4,6 @@
  * Project: TIGERS - GrSimAdapter
  * Date: 17.07.2012
  * Author(s): Peter Birkenkampf, TilmanS
- * 
  * *********************************************************
  */
 package edu.dhbw.mannheim.tigers.sumatra.model.modules.impls.botmanager.bots.grsim;
@@ -25,7 +24,6 @@ import edu.dhbw.mannheim.tigers.sumatra.model.data.GrSimPacket;
  * Creates the Protobuf commands that are to be sent to grSim
  * 
  * @author Peter Birkenkampf, TilmanS
- * 
  */
 public class GrSimConnection
 {
@@ -51,7 +49,7 @@ public class GrSimConnection
 	/**
 	 * @param config
 	 */
-	public GrSimConnection(GrSimNetworkCfg config)
+	public GrSimConnection(final GrSimNetworkCfg config)
 	{
 		ip = config.getIp();
 		port = config.getPort();
@@ -108,7 +106,7 @@ public class GrSimConnection
 	/**
 	 * @param timeStamp
 	 */
-	public void setTime(float timeStamp)
+	public void setTime(final float timeStamp)
 	{
 		this.timeStamp = timeStamp;
 	}
@@ -117,7 +115,7 @@ public class GrSimConnection
 	/**
 	 * @param wheel1
 	 */
-	public void setWheel1(float wheel1)
+	public void setWheel1(final float wheel1)
 	{
 		this.wheel1 = wheel1;
 	}
@@ -126,7 +124,7 @@ public class GrSimConnection
 	/**
 	 * @param wheel2
 	 */
-	public void setWheel2(float wheel2)
+	public void setWheel2(final float wheel2)
 	{
 		this.wheel2 = wheel2;
 	}
@@ -135,7 +133,7 @@ public class GrSimConnection
 	/**
 	 * @param wheel3
 	 */
-	public void setWheel3(float wheel3)
+	public void setWheel3(final float wheel3)
 	{
 		this.wheel3 = wheel3;
 	}
@@ -144,7 +142,7 @@ public class GrSimConnection
 	/**
 	 * @param wheel4
 	 */
-	public void setWheel4(float wheel4)
+	public void setWheel4(final float wheel4)
 	{
 		this.wheel4 = wheel4;
 	}
@@ -153,7 +151,7 @@ public class GrSimConnection
 	/**
 	 * @param mode
 	 */
-	public void setKickmode(int mode)
+	public void setKickmode(final int mode)
 	{
 		kickmode = mode;
 	}
@@ -162,7 +160,7 @@ public class GrSimConnection
 	/**
 	 * @param disarm
 	 */
-	public void setKickerDisarm(boolean disarm)
+	public void setKickerDisarm(final boolean disarm)
 	{
 		kickerDisarm = disarm;
 	}
@@ -171,7 +169,7 @@ public class GrSimConnection
 	/**
 	 * @param kickspeedx
 	 */
-	public void setKickspeedX(float kickspeedx)
+	public void setKickspeedX(final float kickspeedx)
 	{
 		this.kickspeedx = kickspeedx;
 	}
@@ -180,7 +178,7 @@ public class GrSimConnection
 	/**
 	 * @param kickspeedz
 	 */
-	public void setKickspeedZ(float kickspeedz)
+	public void setKickspeedZ(final float kickspeedz)
 	{
 		this.kickspeedz = kickspeedz;
 	}
@@ -189,7 +187,7 @@ public class GrSimConnection
 	/**
 	 * @param velx
 	 */
-	public void setVelX(float velx)
+	public void setVelX(final float velx)
 	{
 		this.velx = velx;
 	}
@@ -198,7 +196,7 @@ public class GrSimConnection
 	/**
 	 * @param vely
 	 */
-	public void setVelY(float vely)
+	public void setVelY(final float vely)
 	{
 		this.vely = vely;
 	}
@@ -207,7 +205,7 @@ public class GrSimConnection
 	/**
 	 * @param velz
 	 */
-	public void setVelZ(float velz)
+	public void setVelZ(final float velz)
 	{
 		this.velz = velz;
 	}
@@ -216,7 +214,7 @@ public class GrSimConnection
 	/**
 	 * @param id
 	 */
-	public void setId(int id)
+	public void setId(final int id)
 	{
 		this.id = id;
 	}
@@ -225,7 +223,7 @@ public class GrSimConnection
 	/**
 	 * @param spinner
 	 */
-	public void setSpinner(boolean spinner)
+	public void setSpinner(final boolean spinner)
 	{
 		this.spinner = spinner;
 	}
@@ -235,7 +233,7 @@ public class GrSimConnection
 	 * @param speed
 	 */
 	
-	public void setSpinnerSpeed(float speed)
+	public void setSpinnerSpeed(final float speed)
 	{
 		spinnerspeed = speed;
 	}
@@ -244,7 +242,7 @@ public class GrSimConnection
 	/**
 	 * @param wheelSpeed
 	 */
-	public void setWheelSpeed(boolean wheelSpeed)
+	public void setWheelSpeed(final boolean wheelSpeed)
 	{
 		this.wheelSpeed = wheelSpeed;
 	}
@@ -253,7 +251,7 @@ public class GrSimConnection
 	/**
 	 * @param teamYellow
 	 */
-	public void setTeamYellow(boolean teamYellow)
+	public void setTeamYellow(final boolean teamYellow)
 	{
 		this.teamYellow = teamYellow;
 	}
@@ -263,7 +261,7 @@ public class GrSimConnection
 	 * @param ip
 	 */
 	
-	public void setIp(String ip)
+	public void setIp(final String ip)
 	{
 		this.ip = ip;
 	}
@@ -272,7 +270,7 @@ public class GrSimConnection
 	/**
 	 * @param port
 	 */
-	public void setPort(int port)
+	public void setPort(final int port)
 	{
 		this.port = port;
 	}
