@@ -4,7 +4,6 @@
  * Project: TIGERS - Sumatra
  * Date: 31.03.2011
  * Author(s): AndreR
- * 
  * *********************************************************
  */
 package edu.dhbw.mannheim.tigers.sumatra.model.modules.impls.botmanager.bots.communication.udp;
@@ -21,7 +20,6 @@ import edu.dhbw.mannheim.tigers.sumatra.model.modules.impls.botmanager.commands.
  * UDP Transmitter interface.
  * 
  * @author AndreR
- * 
  */
 public interface ITransmitterUDP
 {
@@ -30,7 +28,6 @@ public interface ITransmitterUDP
 	// --- methods --------------------------------------------------------------
 	// --------------------------------------------------------------------------
 	/**
-	 * 
 	 * @param cmd
 	 */
 	void enqueueCommand(ACommand cmd);
@@ -49,7 +46,6 @@ public interface ITransmitterUDP
 	
 	
 	/**
-	 * 
 	 * @param newSocket
 	 * @throws IOException
 	 */
@@ -57,7 +53,6 @@ public interface ITransmitterUDP
 	
 	
 	/**
-	 * 
 	 * @param dstIp
 	 * @param dstPort
 	 */
@@ -68,14 +63,12 @@ public interface ITransmitterUDP
 	// --- getter/setter --------------------------------------------------------
 	// --------------------------------------------------------------------------
 	/**
-	 * 
 	 * @return
 	 */
 	Statistics getStats();
 	
 	
 	/**
-	 * 
 	 * @param legacy
 	 */
 	void setLegacy(boolean legacy);

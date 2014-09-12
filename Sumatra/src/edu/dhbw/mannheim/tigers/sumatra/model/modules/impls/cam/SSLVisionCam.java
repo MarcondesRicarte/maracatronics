@@ -92,9 +92,9 @@ public class SSLVisionCam extends ACam implements Runnable, IReceiver, ITeamConf
 	 */
 	public SSLVisionCam(final SubnodeConfiguration subnodeConfiguration)
 	{
-		port = 10020; // subnodeConfiguration.getInt("port");
-		address = "127.0.0.1"; // subnodeConfiguration.getString(/* "address" */);
-		final String network = "127.0.0.1"; // subnodeConfiguration.getString("interface");
+		port = subnodeConfiguration.getInt("port"); // 10020;
+		address = subnodeConfiguration.getString("address"); // "127.0.0.1";
+		final String network = subnodeConfiguration.getString("interface"); // "127.0.0.1";
 		
 		TeamConfig.getInstance().addObserver(this);
 		
