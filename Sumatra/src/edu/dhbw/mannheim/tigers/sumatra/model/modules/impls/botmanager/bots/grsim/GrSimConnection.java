@@ -13,6 +13,9 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.SocketException;
+import java.util.Scanner;
+
+import jssc.SerialPort;
 
 import org.apache.log4j.Logger;
 
@@ -303,6 +306,73 @@ public class GrSimConnection
 		{
 			log.error("Could not send package to grSim", e);
 		}
+		
+		// Mandar comnados par robô fisico teste
+		Scanner in = new Scanner(System.in);
+		SerialPort serialPort = new SerialPort("\\\\\\\\.\\\\COM3");
+		try
+		{
+			if (serialPort.isOpened())
+			{
+				serialPort.closePort();
+				System.out.println("Porta ocupada!");
+			}
+			serialPort.openPort();// Open serial port
+			serialPort.setParams(SerialPort.BAUDRATE_9600,
+					SerialPort.DATABITS_8,
+					SerialPort.STOPBITS_1,
+					SerialPort.PARITY_NONE);
+			
+			byte pwmM1, pwmM2, pwmM3, dirM1, dirM2, dirM3, chute, drible, bateria;
+			byte id = 0;
+			System.out.println("velocidade:" + velx);
+			if (velx != 0)
+			{
+				pwmM1 = 30;
+				dirM1 = 0;
+				pwmM2 = 50;
+				dirM2 = 0;
+				pwmM3 = 80;
+				dirM3 = 0;
+			} else
+			{
+				pwmM1 = 0;
+				dirM1 = 0;
+				pwmM2 = 0;
+				dirM2 = 0;
+				pwmM3 = 0;
+				dirM3 = 0;
+			}
+			chute = 0;
+			drible = 0;
+			bateria = 0; // in.nextByte();
+			byte ultimo = (byte) (chute + (4 * drible) + (8 * bateria));
+			byte M1 = (byte) ((dirM1 * 128) + pwmM1);
+			byte M2 = (byte) ((dirM2 * 128) + pwmM2);
+			byte M3 = (byte) ((dirM3 * 128) + pwmM3);
+			
+			byte[] arrayBytes = new byte[5];
+			
+			arrayBytes[0] = id;
+			arrayBytes[1] = M1;
+			arrayBytes[2] = M2;
+			arrayBytes[3] = M3;
+			arrayBytes[4] = ultimo;
+			
+			for (int i = 0; i < 5; i++)
+			{
+				System.out.println(arrayBytes[i]);
+			}
+			System.out.println();
+			serialPort.writeBytes(arrayBytes);
+			System.out.println("enviado");
+			serialPort.closePort();
+			Thread.sleep(10000);
+		} catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		
 	}
 	
 	
