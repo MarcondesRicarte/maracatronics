@@ -309,7 +309,7 @@ public class GrSimConnection
 		
 		// Mandar comnados par robô fisico teste
 		Scanner in = new Scanner(System.in);
-		SerialPort serialPort = new SerialPort("\\\\\\\\.\\\\COM3");
+		SerialPort serialPort = new SerialPort("\\\\\\\\.\\\\COM4");
 		try
 		{
 			if (serialPort.isOpened())
@@ -326,13 +326,30 @@ public class GrSimConnection
 			byte pwmM1, pwmM2, pwmM3, dirM1, dirM2, dirM3, chute, drible, bateria;
 			byte id = 0;
 			System.out.println("velocidade:" + velx);
-			if (velx != 0)
+			double norma, angle;
+			if ((id == 0) && (teamYellow == true))
 			{
-				pwmM1 = 30;
+				norma = Math.sqrt((Math.pow(velx, 2) + Math.pow(vely, 2)));
+				if (velx == 0)
+				{
+					angle = Math.PI / 2;
+				} else
+				{
+					angle = Math.atan(vely / velx);
+				}
+				System.out.println("Angulo" + angle);
+				
+				pwmM2 = (byte) Math.round(100 *
+						Math.cos(angle + (Math.PI / 2)));
+				pwmM3 = (byte) Math.round(100 *
+						Math.cos(angle + (-Math.PI / 6)));
+				pwmM1 = (byte) Math.round(100 * norma *
+						Math.cos(angle + ((7 * Math.PI) / 6)));
+				System.out.println("byte1" + pwmM1);
+				System.out.println("byte2" + pwmM2);
+				System.out.println("byte3" + pwmM3);
 				dirM1 = 0;
-				pwmM2 = 50;
 				dirM2 = 0;
-				pwmM3 = 80;
 				dirM3 = 0;
 			} else
 			{
