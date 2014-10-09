@@ -284,6 +284,7 @@ public class GrSimConnection
 	 */
 	public void send()
 	{
+		
 		if (ds == null)
 		{
 			log.error("No open connection to grSim Bot.");
@@ -307,6 +308,7 @@ public class GrSimConnection
 			log.error("Could not send package to grSim", e);
 		}
 		
+		
 		// Mandar comnados par robô fisico teste
 		Scanner in = new Scanner(System.in);
 		SerialPort serialPort = new SerialPort("\\\\\\\\.\\\\COM4");
@@ -327,7 +329,7 @@ public class GrSimConnection
 			byte id = 0;
 			System.out.println("velocidade:" + velx);
 			double norma, angle;
-			if ((id == 0) && (teamYellow == true))
+			if ((id == 2) && (teamYellow == true)) // codificaçao do robô
 			{
 				norma = Math.sqrt((Math.pow(velx, 2) + Math.pow(vely, 2)));
 				if (velx == 0)
@@ -335,22 +337,52 @@ public class GrSimConnection
 					angle = Math.PI / 2;
 				} else
 				{
+					
 					angle = Math.atan(vely / velx);
 				}
+				System.out.println("Velx" + velx);
+				System.out.println("Vely" + vely);
 				System.out.println("Angulo" + angle);
 				
-				pwmM2 = (byte) Math.round(100 *
-						Math.cos(angle + (Math.PI / 2)));
-				pwmM3 = (byte) Math.round(100 *
-						Math.cos(angle + (-Math.PI / 6)));
-				pwmM1 = (byte) Math.round(100 * norma *
-						Math.cos(angle + ((7 * Math.PI) / 6)));
-				System.out.println("byte1" + pwmM1);
-				System.out.println("byte2" + pwmM2);
-				System.out.println("byte3" + pwmM3);
-				dirM1 = 0;
-				dirM2 = 0;
-				dirM3 = 0;
+				
+				if (norma > Math.abs(0.1))
+				{ // translação
+					System.out.println("Translação");
+					pwmM1 = (byte) Math.round(100 * norma *
+							Math.cos(angle + ((7 * Math.PI) / 6)));
+					pwmM2 = (byte) Math.round(100 *
+							Math.cos(angle + (Math.PI / 2)));
+					pwmM3 = (byte) Math.round(100 *
+							Math.cos(angle + (-Math.PI / 6)));
+					dirM1 = 0;
+					dirM2 = 0;
+					dirM3 = 0;
+				} else
+				{ // rotação
+					System.out.println("Rotação");
+					pwmM1 = pwmM2 = pwmM3 = 30;
+					if ((angle > 0) && (angle < Math.PI))
+					{
+						System.out.println("Anti-horário");
+						dirM1 = 1;
+						dirM2 = 1;
+						dirM3 = 1;
+					} else
+					{
+						System.out.println("Horário");
+						dirM1 = 0;
+						dirM2 = 0;
+						dirM3 = 0;
+					}
+				}
+				
+				System.out.println("norma: " + norma);
+				System.out.println("angulo: " + angle);
+				System.out.println("byte1: " + pwmM1);
+				System.out.println("byte2: " + pwmM2);
+				System.out.println("byte3: " + pwmM3);
+				
+				
 			} else
 			{
 				pwmM1 = 0;
