@@ -13,7 +13,6 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.SocketException;
-import java.util.Scanner;
 
 import jssc.SerialPort;
 
@@ -299,6 +298,14 @@ public class GrSimConnection
 				.setIsteamyellow(teamYellow).addRobotCommands(command).build();
 		GrSimPacket.grSim_Packet packet = GrSimPacket.grSim_Packet.newBuilder().setCommands(command2).build();
 		byte[] buffer2 = packet.toByteArray();
+		
+		// System.out.println("Commands: ");
+		// System.out.println("Id: " + id + "Wheel 1: " + wheel1 + "Wheel 2: " + wheel2 + "Wheel 3: " + wheel3);
+		// System.out.println("Whell 4: " + wheel4 + "KickSpeedX: " + kickspeedx + "KickSpeedZ: " + kickspeedz);
+		// System.out.println("VelX: " + velx + "VelY: " + vely + "VelZ: " + velz + "Spinner: " + spinner);
+		// System.out.println("WheelSpeed: " + wheelSpeed + "KickMode: " + kickmode + "DisarmKicker: " + kickerDisarm);
+		// System.out.println("SpinnerSpeed: " + spinnerspeed);
+		
 		try
 		{
 			DatagramPacket dp = new DatagramPacket(buffer2, buffer2.length, InetAddress.getByName(ip), port);
@@ -310,8 +317,8 @@ public class GrSimConnection
 		
 		
 		// Mandar comnados par robô fisico teste
-		Scanner in = new Scanner(System.in);
-		SerialPort serialPort = new SerialPort("\\\\\\\\.\\\\COM4");
+		// Scanner in = new Scanner(System.in);
+		SerialPort serialPort = new SerialPort("\\\\\\\\.\\\\COM8");
 		try
 		{
 			if (serialPort.isOpened())
@@ -320,32 +327,33 @@ public class GrSimConnection
 				System.out.println("Porta ocupada!");
 			}
 			serialPort.openPort();// Open serial port
-			serialPort.setParams(SerialPort.BAUDRATE_9600,
+			serialPort.setParams(SerialPort.BAUDRATE_115200,
 					SerialPort.DATABITS_8,
 					SerialPort.STOPBITS_1,
 					SerialPort.PARITY_NONE);
 			
-			byte pwmM1, pwmM2, pwmM3, dirM1, dirM2, dirM3, chute, drible, bateria;
-			byte id = 0;
-			System.out.println("velocidade:" + velx);
-			double norma, angle;
+			byte pwmM1, pwmM2, pwmM3, dirM1 = 0, dirM2 = 0, dirM3 = 0, chute, drible, bateria;
+			byte idComand = 0;
+			double norma, angle = 0;
 			if ((id == 2) && (teamYellow == true)) // codificaçao do robô
 			{
 				norma = Math.sqrt((Math.pow(velx, 2) + Math.pow(vely, 2)));
-				if (velx == 0)
-				{
-					angle = Math.PI / 2;
-				} else
-				{
-					
-					angle = Math.atan(vely / velx);
-				}
-				System.out.println("Velx" + velx);
-				System.out.println("Vely" + vely);
-				System.out.println("Angulo" + angle);
+				/*
+				 * if (velx == 0)
+				 * {
+				 * angle = Math.PI / 2;
+				 * } else
+				 * {
+				 * angle = Math.atan(vely / velx);
+				 * }
+				 */
+				System.out.println("Velx: " + velx);
+				System.out.println("Vely: " + vely);
+				System.out.println("Vel Angular: " + velz);
+				// System.out.println("Angulo: " + angle);
 				
 				
-				if (norma > Math.abs(0.1))
+				if (velz < Math.abs(0.1)) // velocidade angular
 				{ // translação
 					System.out.println("Translação");
 					pwmM1 = (byte) Math.round(100 * norma *
@@ -360,20 +368,20 @@ public class GrSimConnection
 				} else
 				{ // rotação
 					System.out.println("Rotação");
-					pwmM1 = pwmM2 = pwmM3 = 30;
-					if ((angle > 0) && (angle < Math.PI))
-					{
-						System.out.println("Anti-horário");
-						dirM1 = 1;
-						dirM2 = 1;
-						dirM3 = 1;
-					} else
-					{
-						System.out.println("Horário");
-						dirM1 = 0;
-						dirM2 = 0;
-						dirM3 = 0;
-					}
+					pwmM1 = pwmM2 = pwmM3 = (byte) Math.round(100 * velz); // a velocidade angular é (100 * velz).
+					// if ((angle > 0) && (angle < Math.PI))
+					// {
+					// System.out.println("Anti-horário");
+					// dirM1 = 1;
+					// dirM2 = 1;
+					// dirM3 = 1;
+					// } else
+					// {
+					// System.out.println("Horário");
+					// dirM1 = 0;
+					// dirM2 = 0;
+					// dirM3 = 0;
+					// }
 				}
 				
 				System.out.println("norma: " + norma);
@@ -394,7 +402,7 @@ public class GrSimConnection
 			}
 			chute = 0;
 			drible = 0;
-			bateria = 0; // in.nextByte();
+			bateria = 0;
 			byte ultimo = (byte) (chute + (4 * drible) + (8 * bateria));
 			byte M1 = (byte) ((dirM1 * 128) + pwmM1);
 			byte M2 = (byte) ((dirM2 * 128) + pwmM2);
@@ -402,7 +410,7 @@ public class GrSimConnection
 			
 			byte[] arrayBytes = new byte[5];
 			
-			arrayBytes[0] = id;
+			arrayBytes[0] = idComand;
 			arrayBytes[1] = M1;
 			arrayBytes[2] = M2;
 			arrayBytes[3] = M3;
@@ -416,7 +424,7 @@ public class GrSimConnection
 			serialPort.writeBytes(arrayBytes);
 			System.out.println("enviado");
 			serialPort.closePort();
-			Thread.sleep(10000);
+			// Thread.sleep(50);
 		} catch (Exception e)
 		{
 			e.printStackTrace();
