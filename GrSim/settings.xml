@@ -115,7 +115,7 @@
 			224.5.23.2
 		</Var>
 		<Var name="Vision multicast port" type="int" minval="" maxval="">
-			10002
+			40102
 		</Var>
 		<Var name="Command listen port" type="int" minval="" maxval="">
 			20011

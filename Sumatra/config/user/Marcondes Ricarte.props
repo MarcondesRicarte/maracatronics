@@ -1,4 +1,4 @@
-#Wed Oct 08 22:08:21 ART 2014
+#Sun Oct 12 16:39:44 ART 2014
 edu.dhbw.mannheim.tigers.sumatra.presenter.main.MainPresenter.h=744
 edu.dhbw.mannheim.tigers.sumatra.model.modules.impls.ai.config.AIConfig.roles=roles.xml
 edu.dhbw.mannheim.tigers.sumatra.model.modules.impls.ai.config.AIConfig.metis=metis.xml
@@ -33,9 +33,9 @@ edu.dhbw.mannheim.tigers.sumatra.presenter.main.MainPresenter.layout=last.ly
 edu.dhbw.mannheim.tigers.sumatra.view.visualizer.internals.OptionsPanel.BALL_BUFFER=false
 edu.dhbw.mannheim.tigers.sumatra.presenter.log.LogPresenter.loglevel=DEBUG
 edu.dhbw.mannheim.tigers.sumatra.view.visualizer.internals.OptionsPanel.FIELD_MARKS=false
-edu.dhbw.mannheim.tigers.sumatra.model.modules.impls.ai.config.AIConfig.misc=misc.xml
-edu.dhbw.mannheim.tigers.sumatra.view.visualizer.internals.OptionsPanel.TACTICS=true
 edu.dhbw.mannheim.tigers.sumatra.view.visualizer.internals.OptionsPanel.ACCELERATION=false
+edu.dhbw.mannheim.tigers.sumatra.view.visualizer.internals.OptionsPanel.TACTICS=true
+edu.dhbw.mannheim.tigers.sumatra.model.modules.impls.ai.config.AIConfig.misc=misc.xml
 edu.dhbw.mannheim.tigers.sumatra.model.modules.impls.ai.config.AIConfig.conditions=conditions.xml
 edu.dhbw.mannheim.tigers.sumatra.view.aicenter.internals.moduleoverview.RoleControlPanel.role=OFFENSIVE
 edu.dhbw.mannheim.tigers.sumatra.view.visualizer.internals.OptionsPanel.ANALYSIS_GRID=false
