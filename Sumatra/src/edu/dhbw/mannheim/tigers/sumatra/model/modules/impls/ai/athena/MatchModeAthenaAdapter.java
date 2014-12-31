@@ -11,6 +11,7 @@ package edu.dhbw.mannheim.tigers.sumatra.model.modules.impls.ai.athena;
 import java.util.ArrayList;
 import java.util.List;
 
+import edu.dhbw.mannheim.tigers.sumatra.Sumatra;
 import edu.dhbw.mannheim.tigers.sumatra.model.data.frames.MetisAiFrame;
 import edu.dhbw.mannheim.tigers.sumatra.model.data.modules.ai.PlayStrategy;
 import edu.dhbw.mannheim.tigers.sumatra.model.data.modules.ai.PlayStrategy.Builder;
@@ -42,6 +43,31 @@ public class MatchModeAthenaAdapter extends AAthenaAdapter
 			{
 				case Halt:
 					playStrategyBuilder.getActivePlays().clear();
+					// GAMBIARRA//
+					try
+					{
+						
+						
+						byte pwmM1 = 0, pwmM2 = 0, pwmM3 = 0, dirM1 = 0, dirM2 = 0, dirM3 = 0, chute = 0, drible = 0, bateria = 0;
+						byte ultimo = (byte) (chute + (4 * drible) + (8 * bateria));
+						byte M1 = (byte) ((dirM1 * 128) + pwmM1);
+						byte M2 = (byte) ((dirM2 * 128) + pwmM2);
+						byte M3 = (byte) ((dirM3 * 128) + pwmM3);
+						byte[] arrayBytes = new byte[5];
+						byte idComand = 0;
+						arrayBytes[0] = idComand;
+						arrayBytes[1] = M1;
+						arrayBytes[2] = M2;
+						arrayBytes[3] = M3;
+						arrayBytes[4] = ultimo;
+						Sumatra.serialPort.writeBytes(arrayBytes);
+						Thread.sleep(100);
+					} catch (Exception e)
+					{
+						e.printStackTrace();
+					}
+					System.out.println("PAROU AS POTARIA");
+					
 					break;
 				case TimeoutEnemies:
 				case TimeoutTigers:

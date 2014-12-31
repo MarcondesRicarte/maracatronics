@@ -54,6 +54,7 @@ public enum EPlay implements IInstanceableEnum
 	/**  */
 	GUI_TEST(new InstanceableClass(GuiTestPlay.class));
 	
+	
 	private final InstanceableClass	clazz;
 	
 	

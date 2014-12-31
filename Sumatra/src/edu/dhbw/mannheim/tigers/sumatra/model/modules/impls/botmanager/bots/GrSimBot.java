@@ -228,10 +228,6 @@ public class GrSimBot extends ABot implements IWorldFrameConsumer
 			velYBuffer = -move.getX();
 			velZBuffer = move.getW();
 		}
-		System.out.println("handleMove");
-		System.out.println("velXBuffer:" + velXBuffer);
-		System.out.println("velYBuffer:" + velYBuffer);
-		System.out.println("velZBuffer:" + velZBuffer);
 		con.setVelX(velXBuffer);
 		con.setVelY(velYBuffer);
 		con.setVelZ(velZBuffer);
@@ -266,10 +262,6 @@ public class GrSimBot extends ABot implements IWorldFrameConsumer
 			velYBuffer = 0;
 			velZBuffer = 0;
 		}
-		System.out.println("handlePositionMove");
-		System.out.println("velXBuffer:" + velXBuffer);
-		System.out.println("velYBuffer:" + velYBuffer);
-		System.out.println("velZBuffer:" + velZBuffer);
 		con.setVelX(velXBuffer);
 		con.setVelY(velYBuffer);
 		con.setVelZ(velZBuffer);

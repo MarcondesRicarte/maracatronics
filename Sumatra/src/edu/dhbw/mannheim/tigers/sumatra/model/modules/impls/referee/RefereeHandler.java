@@ -79,6 +79,7 @@ public class RefereeHandler extends AReferee implements ITeamConfigObserver
 			public void run()
 			{
 				sendOwnRefereeMsg(Command.HALT, 0, 0, (short) 0);
+				
 			}
 		});
 		GlobalShortcuts.register(EShortcut.REFEREE_STOP, new Runnable()
