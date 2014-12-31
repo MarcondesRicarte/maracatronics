@@ -5282,3 +5282,828 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2014-10-19 13:11:06.546 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.7.0_17
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2014-10-19 13:11:29.541
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.emf.ecore 2 0 2014-10-19 13:11:32.520
+!MESSAGE Both 'org.eclipse.papyrus.eastadl' and 'org.eclipse.papyrus.sysml' register an extension parser for 'Requirements'
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-10-19 13:12:28.025
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Marcondes Ricarte'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.core 4 4 2014-10-19 13:13:34.216
+!MESSAGE JavaBuilder handling ImageBuilderInternalException while building: Sumatra
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:816)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:114)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:46)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:178)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:401)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:618)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:597)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:114)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate$1.run(LaunchConfigurationDelegate.java:423)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2327)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:430)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:126)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:826)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Contains: Could not delete '/Sumatra/bin/edu'.
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:351)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:352)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:798)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1977)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:803)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:114)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:46)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:178)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:401)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:618)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:597)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:114)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate$1.run(LaunchConfigurationDelegate.java:423)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2327)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:430)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:126)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:826)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Contains: Problems encountered while deleting files.
+Contains: Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw\mannheim\tigers\sumatra\test\junit\model\modules\impls\ai\metis.
+Contains: Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw\mannheim\tigers\sumatra\test\junit\model\modules\impls\ai.
+Contains: Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw\mannheim\tigers\sumatra\test\junit\model\modules\impls.
+Contains: Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw\mannheim\tigers\sumatra\test\junit\model\modules.
+Contains: Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw\mannheim\tigers\sumatra\test\junit\model.
+Contains: Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw\mannheim\tigers\sumatra\test\junit.
+Contains: Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw\mannheim\tigers\sumatra\test.
+Contains: Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw\mannheim\tigers\sumatra.
+Contains: Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw\mannheim\tigers.
+Contains: Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw\mannheim.
+Contains: Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw.
+Contains: Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu.
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2014-10-19 13:13:34.263
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.eclipse.core.resources 4 273 2014-10-19 13:13:34.263
+!MESSAGE Could not delete '/Sumatra/bin/edu'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:351)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:352)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:798)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1977)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:803)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.cleanOutputFolders(BatchImageBuilder.java:114)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:46)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:178)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:401)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:618)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:597)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:114)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate$1.run(LaunchConfigurationDelegate.java:423)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2327)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:430)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:126)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:826)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:707)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1018)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Contains: Problems encountered while deleting files.
+Contains: Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw\mannheim\tigers\sumatra\test\junit\model\modules\impls\ai\metis.
+Contains: Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw\mannheim\tigers\sumatra\test\junit\model\modules\impls\ai.
+Contains: Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw\mannheim\tigers\sumatra\test\junit\model\modules\impls.
+Contains: Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw\mannheim\tigers\sumatra\test\junit\model\modules.
+Contains: Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw\mannheim\tigers\sumatra\test\junit\model.
+Contains: Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw\mannheim\tigers\sumatra\test\junit.
+Contains: Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw\mannheim\tigers\sumatra\test.
+Contains: Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw\mannheim\tigers\sumatra.
+Contains: Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw\mannheim\tigers.
+Contains: Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw\mannheim.
+Contains: Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw.
+Contains: Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu.
+!SUBENTRY 3 org.eclipse.core.resources 4 273 2014-10-19 13:13:34.263
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 4 org.eclipse.core.filesystem 4 273 2014-10-19 13:13:34.263
+!MESSAGE Problems encountered while deleting files.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2014-10-19 13:13:34.263
+!MESSAGE Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw\mannheim\tigers\sumatra\test\junit\model\modules\impls\ai\metis.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2014-10-19 13:13:34.263
+!MESSAGE Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw\mannheim\tigers\sumatra\test\junit\model\modules\impls\ai.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2014-10-19 13:13:34.263
+!MESSAGE Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw\mannheim\tigers\sumatra\test\junit\model\modules\impls.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2014-10-19 13:13:34.263
+!MESSAGE Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw\mannheim\tigers\sumatra\test\junit\model\modules.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2014-10-19 13:13:34.263
+!MESSAGE Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw\mannheim\tigers\sumatra\test\junit\model.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2014-10-19 13:13:34.263
+!MESSAGE Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw\mannheim\tigers\sumatra\test\junit.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2014-10-19 13:13:34.263
+!MESSAGE Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw\mannheim\tigers\sumatra\test.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2014-10-19 13:13:34.263
+!MESSAGE Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw\mannheim\tigers\sumatra.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2014-10-19 13:13:34.263
+!MESSAGE Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw\mannheim\tigers.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2014-10-19 13:13:34.263
+!MESSAGE Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw\mannheim.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2014-10-19 13:13:34.263
+!MESSAGE Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu\dhbw.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2014-10-19 13:13:34.263
+!MESSAGE Could not delete: C:\Maracatronics\maracatronics\Sumatra\bin\edu.
+
+!ENTRY org.eclipse.ui 2 2 2014-10-19 15:30:23.193
+!MESSAGE Invalid property category path: org.eclipse.cdt.managedbuilder.ui.properties.Page_head_build (bundle: org.eclipse.cdt.ui, propertyPage: org.eclipse.cdt.managedbuilder.ui.properties.BuildLogPreferencePage)
+!SESSION 2014-10-19 15:30:36.643 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.7.0_17
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.emf.ecore 2 0 2014-10-19 15:31:48.767
+!MESSAGE Both 'org.eclipse.papyrus.eastadl' and 'org.eclipse.papyrus.sysml' register an extension parser for 'Requirements'
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-10-19 15:32:15.019
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Marcondes Ricarte'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:34:10.334
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:34:26.741
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:34:45.219
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:34:45.568
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:34:49.602
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:34:54.410
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:34:55.889
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:34:58.004
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:34:58.378
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:01.104
+!MESSAGE Invalid source in AbstractLinesOfCode
+!STACK 0
+org.eclipse.jdt.core.compiler.InvalidInputException: Invalid_Character_Constant
+	at org.eclipse.jdt.internal.core.util.PublicScanner.getNextToken(PublicScanner.java:1424)
+	at net.sourceforge.metrics.calculators.AbstractLinesOfCode.calculateNumberOfLines(AbstractLinesOfCode.java:74)
+	at net.sourceforge.metrics.calculators.AbstractLinesOfCode.calculate(AbstractLinesOfCode.java:39)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.invokeCalculators(AbstractMetricSource.java:487)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.calculate(AbstractMetricSource.java:167)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:305)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:132)
+	at net.sourceforge.metrics.core.sources.TypeMetrics.initializeChildren(TypeMetrics.java:79)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:132)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:86)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:01.241
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:01.721
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:01.972
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:03.273
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:06.077
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 1
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:06.219
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 2
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:06.496
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 4
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:06.603
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 1
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:07.860
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 4
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:08.023
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 1
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:08.905
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:09.168
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 3
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:09.434
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 2
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:09.625
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 2
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:11.419
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 2
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:12.468
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 3
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:12.700
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 3
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:12.806
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 1
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:12.910
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 1
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:13.108
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 3
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:13.316
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 3
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:28.038
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 4
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:29.214
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 4
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:35.641
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 1
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:35.972
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:36.777
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:36.910
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:37.028
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:37.114
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:37.192
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:37.924
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:38.017
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:56.156
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:57.132
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:57.557
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:35:57.639
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:36:00.544
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:36:00.632
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:36:04.832
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:36:05.970
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 1
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:36:38.031
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 1
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:36:38.986
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 1
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:37:28.296
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 1
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY net.sourceforge.metrics 4 4 2014-10-19 15:37:31.160
+!MESSAGE CompilationUnitMetrics::addInnerClasses
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 1
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.addInnerClasses(CompilationUnitMetrics.java:100)
+	at net.sourceforge.metrics.core.sources.CompilationUnitMetrics.initializeChildren(CompilationUnitMetrics.java:88)
+	at net.sourceforge.metrics.core.sources.AbstractMetricSource.recurse(AbstractMetricSource.java:297)
+	at net.sourceforge.metrics.core.sources.Dispatcher.calculateAbstractMetricSource(Dispatcher.java:109)
+	at net.sourceforge.metrics.builder.MetricsBuilder$ChangedCommand.execute(MetricsBuilder.java:509)
+	at net.sourceforge.metrics.builder.MetricsBuilder$CalculatorThread.run(MetricsBuilder.java:713)
+
+!ENTRY org.eclipse.ui 2 2 2014-10-19 21:16:04.900
+!MESSAGE Invalid property category path: org.eclipse.cdt.managedbuilder.ui.properties.Page_head_build (bundle: org.eclipse.cdt.ui, propertyPage: org.eclipse.cdt.managedbuilder.ui.properties.BuildLogPreferencePage)
+!SESSION 2014-10-20 08:17:28.280 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.7.0_17
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.emf.ecore 2 0 2014-10-20 08:19:36.856
+!MESSAGE Both 'org.eclipse.papyrus.eastadl' and 'org.eclipse.papyrus.sysml' register an extension parser for 'Requirements'
+
+!ENTRY org.eclipse.egit.ui 2 0 2014-10-20 08:20:32.267
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Marcondes Ricarte'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 2 2 2014-10-20 11:38:45.538
+!MESSAGE Invalid property category path: org.eclipse.cdt.managedbuilder.ui.properties.Page_head_build (bundle: org.eclipse.cdt.ui, propertyPage: org.eclipse.cdt.managedbuilder.ui.properties.BuildLogPreferencePage)

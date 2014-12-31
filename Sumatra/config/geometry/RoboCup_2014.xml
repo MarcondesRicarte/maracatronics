@@ -10,9 +10,9 @@
     <stopSpeed>1.5</stopSpeed>
     <field>
         <!-- x [mm] -->
-        <length>8090</length>
+        <length>6050</length>
         <!-- y [mm] -->
-        <width>6050</width>
+        <width>4040</width>
         <!-- [mm] -->
         <lineWidth>25</lineWidth>
         <!-- The border around the field -->
@@ -32,18 +32,18 @@
             <innerHeight>155</innerHeight>
         </goal>
         <!-- distance goal line - penalty mark [mm] -->
-        <distanceToPenaltyMark>1000</distanceToPenaltyMark>
+        <distanceToPenaltyMark>800</distanceToPenaltyMark>
         <!-- radius of the two, small quarter circles at the sides of the penalty 
 			area. -->
-        <distanceToPenaltyArea>1000</distanceToPenaltyArea>
+        <distanceToPenaltyArea>600</distanceToPenaltyArea>
         <!-- the length of the short line of the penalty area, that is parallel 
 			to the goal line -->
         <lengthOfPenaltyAreaFrontLine>500</lengthOfPenaltyAreaFrontLine>
         <!-- The radius of the center circle ("Mittelkreis") [mm] -->
-        <centerCircleRadius>1000</centerCircleRadius>
+        <centerCircleRadius>600</centerCircleRadius>
         <!-- The center ("Mittelpunkt") -->
         <center>0;0</center>
-        <maintenancePosition>0,3025</maintenancePosition>
+        <maintenancePosition>0,3000</maintenancePosition>
         <!-- penalty line (bots must be behind goal line + penalty mark + penaltyLine 
 			when a penalty kick is executed -->
         <distanceToPenaltyLine>400</distanceToPenaltyLine>

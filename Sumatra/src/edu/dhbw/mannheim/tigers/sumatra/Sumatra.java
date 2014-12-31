@@ -8,6 +8,10 @@
  */
 package edu.dhbw.mannheim.tigers.sumatra;
 
+import java.util.Scanner;
+
+import jssc.SerialPort;
+
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
@@ -158,10 +162,14 @@ import edu.dhbw.mannheim.tigers.sumatra.util.JULLoggingBridge;
 public final class Sumatra
 {
 	private static final Logger	log;
-	
-	
+	public static Scanner			in				= new Scanner(System.in);
+	public static SerialPort		serialPort	= new SerialPort("\\\\\\\\.\\\\COM5");
+	public static SerialPort		serialPort2	= new SerialPort("\\\\\\\\.\\\\COM7"); // TODO mudar porta, colocar no halt
+																												
+																												
 	private Sumatra()
 	{
+		
 		
 	}
 	
@@ -177,6 +185,28 @@ public final class Sumatra
 		
 		log = Logger.getLogger(Sumatra.class.getName());
 		log.trace("Logger initialized and starting Sumatra");
+		
+		
+		// Inicialiação do driver de comunicação
+		try
+		{
+			serialPort.openPort();// Open serial port
+			serialPort.setParams(SerialPort.BAUDRATE_115200,
+					SerialPort.DATABITS_8,
+					SerialPort.STOPBITS_1,
+					SerialPort.PARITY_NONE);
+			serialPort2.openPort();// Open serial port
+			serialPort2.setParams(SerialPort.BAUDRATE_115200,
+					SerialPort.DATABITS_8,
+					SerialPort.STOPBITS_1,
+					SerialPort.PARITY_NONE);
+			
+			
+		} catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		
 	}
 	
 	

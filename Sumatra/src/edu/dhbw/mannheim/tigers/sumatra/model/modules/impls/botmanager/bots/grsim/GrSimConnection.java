@@ -13,11 +13,13 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.SocketException;
+import java.util.GregorianCalendar;
 
 import jssc.SerialPort;
 
 import org.apache.log4j.Logger;
 
+import edu.dhbw.mannheim.tigers.sumatra.Sumatra;
 import edu.dhbw.mannheim.tigers.sumatra.model.data.GrSimCommands;
 import edu.dhbw.mannheim.tigers.sumatra.model.data.GrSimPacket;
 
@@ -317,92 +319,673 @@ public class GrSimConnection
 		
 		
 		// Mandar comnados par robô fisico teste
-		// Scanner in = new Scanner(System.in);
-		SerialPort serialPort = new SerialPort("\\\\\\\\.\\\\COM8");
 		try
 		{
-			if (serialPort.isOpened())
-			{
-				serialPort.closePort();
-				System.out.println("Porta ocupada!");
-			}
-			serialPort.openPort();// Open serial port
-			serialPort.setParams(SerialPort.BAUDRATE_115200,
-					SerialPort.DATABITS_8,
-					SerialPort.STOPBITS_1,
-					SerialPort.PARITY_NONE);
 			
-			byte pwmM1, pwmM2, pwmM3, dirM1 = 0, dirM2 = 0, dirM3 = 0, chute, drible, bateria;
-			byte idComand = 0;
-			double norma, angle = 0;
-			if ((id == 2) && (teamYellow == true)) // codificaçao do robô
+			byte pwmM1 = 0, pwmM2 = 0, pwmM3 = 0, dirM1 = 0, dirM2 = 0, dirM3 = 0, chute = 0, drible = 0, bateria = 0;
+			byte idComand = (byte) id;
+			double norma, angle = 0, coeficiente = 0;
+			
+			System.out.println("ID: " + id);
+			
+			norma = Math.sqrt((Math.pow(velx, 2) + Math.pow(vely, 2)));
+			if (norma > 1.1)
 			{
-				norma = Math.sqrt((Math.pow(velx, 2) + Math.pow(vely, 2)));
-				/*
-				 * if (velx == 0)
-				 * {
-				 * angle = Math.PI / 2;
-				 * } else
-				 * {
-				 * angle = Math.atan(vely / velx);
-				 * }
-				 */
-				System.out.println("Velx: " + velx);
-				System.out.println("Vely: " + vely);
-				System.out.println("Vel Angular: " + velz);
-				// System.out.println("Angulo: " + angle);
-				
-				
-				if (velz < Math.abs(0.1)) // velocidade angular
-				{ // translação
-					System.out.println("Translação");
-					pwmM1 = (byte) Math.round(100 * norma *
-							Math.cos(angle + ((7 * Math.PI) / 6)));
-					pwmM2 = (byte) Math.round(100 *
-							Math.cos(angle + (Math.PI / 2)));
-					pwmM3 = (byte) Math.round(100 *
-							Math.cos(angle + (-Math.PI / 6)));
-					dirM1 = 0;
-					dirM2 = 0;
-					dirM3 = 0;
-				} else
-				{ // rotação
-					System.out.println("Rotação");
-					pwmM1 = pwmM2 = pwmM3 = (byte) Math.round(100 * velz); // a velocidade angular é (100 * velz).
-					// if ((angle > 0) && (angle < Math.PI))
-					// {
-					// System.out.println("Anti-horário");
-					// dirM1 = 1;
-					// dirM2 = 1;
-					// dirM3 = 1;
-					// } else
-					// {
-					// System.out.println("Horário");
-					// dirM1 = 0;
-					// dirM2 = 0;
-					// dirM3 = 0;
-					// }
-				}
-				
-				System.out.println("norma: " + norma);
-				System.out.println("angulo: " + angle);
-				System.out.println("byte1: " + pwmM1);
-				System.out.println("byte2: " + pwmM2);
-				System.out.println("byte3: " + pwmM3);
-				
-				
-			} else
-			{
-				pwmM1 = 0;
-				dirM1 = 0;
-				pwmM2 = 0;
-				dirM2 = 0;
-				pwmM3 = 0;
-				dirM3 = 0;
+				norma = 1.1;
 			}
-			chute = 0;
+			if ((norma > 0.15) && (norma < 1.0))
+			{
+				norma = 1.0;
+			}
+			
+			switch (id)
+			{
+				case 0:
+					if (velx == 0)
+					{
+						if (vely >= 0)
+						{
+							angle = Math.PI / 2;
+						}
+						else
+						{
+							angle = -Math.PI / 2;
+						}
+					} else
+					{
+						angle = Math.atan(vely / velx);
+						if (velx < 0)
+						{
+							angle = Math.PI + angle;
+						}
+					}
+					
+					System.out.println("Velx: " + velx);
+					System.out.println("Vely: " + vely);
+					System.out.println("Vel Angular: " + velz);
+					
+					// GAMBIARRA DO CAPETA, COMENTAR DURANTE TESTE DE RODAS //
+					// angle = angle - (Math.PI / 2);
+					
+					coeficiente = 110.0;
+					System.out.println("Translação");
+					pwmM1 = (byte) Math.round(coeficiente * norma *
+							Math.cos(angle + ((7 * Math.PI) / 6)));
+					pwmM2 = (byte) Math.round(coeficiente * norma *
+							Math.cos(angle + (Math.PI / 2)));
+					pwmM3 = (byte) Math.round(coeficiente * norma *
+							Math.cos(angle + (-Math.PI / 6)));
+					
+					if ((velz > 0) && (velx == 0) && (vely == 0))
+					{
+						velz = velz + 20;
+					}
+					
+					if ((velz < 0) && (velx == 0) && (vely == 0))
+					{
+						velz = velz - 20;
+					}
+					
+					
+					pwmM1 = (byte) (pwmM1 + Math.round((1.5 * velz)));
+					pwmM2 = (byte) (pwmM2 + Math.round((1.5 * velz)));
+					pwmM3 = (byte) (pwmM3 + Math.round((1.5 * velz)));
+					
+					// } else
+					// { // rotação
+					// System.out.println("Rotação");
+					// pwmM1 = pwmM2 = pwmM3 = (byte) Math.round(10 * velz); // a velocidade angular é (100 * velz).
+					//
+					// }
+					
+					// verificando se as rotação são invertidas
+					if (pwmM1 > 0)
+					{
+						dirM1 = 1;
+					}
+					if (pwmM2 > 0)
+					{
+						dirM2 = 1;
+					}
+					if (pwmM3 > 0)
+					{
+						dirM3 = 1;
+					}
+					
+					pwmM1 = (byte) Math.abs(pwmM1);
+					pwmM2 = (byte) Math.abs(pwmM2);
+					pwmM3 = (byte) Math.abs(pwmM3);
+					
+					// AJUSTES DE PWM //
+					// if (Math.abs(vely) > Math.abs(velx))
+					// {
+					// pwmM1 = (byte) (pwmM1 + 10);
+					// pwmM3 = (byte) (pwmM3 + 10);
+					// }
+					
+					System.out.println("drible: " + spinner);
+					System.out.println("chutex: " + kickspeedx);
+					System.out.println("chutez: " + kickspeedz);
+					System.out.println("norma: " + norma);
+					System.out.println("angulo: " + Math.toDegrees(angle));
+					System.out.println("dirM1: " + dirM1);
+					System.out.println("pwmM1: " + pwmM1);
+					System.out.println("dirM2: " + dirM2);
+					System.out.println("pwmM2: " + pwmM2);
+					System.out.println("dirM3: " + dirM3);
+					System.out.println("pwmM3: " + pwmM3);
+					break;
+				
+				case 1:
+					if (velx == 0)
+					{
+						if (vely >= 0)
+						{
+							angle = Math.PI / 2;
+						}
+						else
+						{
+							angle = -Math.PI / 2;
+						}
+					} else
+					{
+						angle = Math.atan(vely / velx);
+						if (velx < 0)
+						{
+							angle = Math.PI + angle;
+						}
+					}
+					
+					System.out.println("Velx: " + velx);
+					System.out.println("Vely: " + vely);
+					System.out.println("Vel Angular: " + velz);
+					
+					
+					// if (Math.abs(velz) < Math.abs(2)) // velocidade angular
+					// { // translação
+					
+					// if ((norma <= 0.20) && (norma >= 0.03))
+					// {
+					// norma = norma + 0.10;
+					// }
+					// if (norma <= 20 && norma >= 3)
+					// {
+					// norma = norma - 10;
+					// }
+					
+					coeficiente = 100.0;
+					System.out.println("Translação");
+					pwmM1 = (byte) Math.round(coeficiente * norma *
+							Math.cos(angle + ((7 * Math.PI) / 6)));
+					pwmM2 = (byte) Math.round(coeficiente * norma *
+							Math.cos(angle + (Math.PI / 2)));
+					pwmM3 = (byte) Math.round(coeficiente * norma *
+							Math.cos(angle + (-Math.PI / 6)));
+					
+					if ((velz > 0) && (velx == 0) && (vely == 0))
+					{
+						velz = velz + 25;
+					}
+					
+					if ((velz < 0) && (velx == 0) && (vely == 0))
+					{
+						velz = velz - 25;
+					}
+					
+					
+					pwmM1 = (byte) (pwmM1 + Math.round((1.5 * velz)));
+					pwmM2 = (byte) (pwmM2 + Math.round((1.5 * velz)));
+					pwmM3 = (byte) (pwmM3 + Math.round((1.5 * velz)));
+					
+					// } else
+					// { // rotação
+					// System.out.println("Rotação");
+					// pwmM1 = pwmM2 = pwmM3 = (byte) Math.round(10 * velz); // a velocidade angular é (100 * velz).
+					//
+					// }
+					
+					// verificando se as rotação são invertidas
+					if (pwmM1 > 0)
+					{
+						dirM1 = 1;
+					}
+					if (pwmM2 > 0)
+					{
+						dirM2 = 1;
+					}
+					if (pwmM3 > 0)
+					{
+						dirM3 = 1;
+					}
+					
+					pwmM1 = (byte) Math.abs(pwmM1);
+					pwmM2 = (byte) Math.abs(pwmM2);
+					pwmM3 = (byte) Math.abs(pwmM3);
+					
+					// AJUSTES DE PWM //
+					// if (Math.abs(vely) > Math.abs(velx))
+					// {
+					// pwmM1 = (byte) (pwmM1 + 10);
+					// pwmM3 = (byte) (pwmM3 + 10);
+					// }
+					
+					
+					System.out.println("norma: " + norma);
+					System.out.println("angulo: " + Math.toDegrees(angle));
+					System.out.println("dirM1: " + dirM1);
+					System.out.println("pwmM1: " + pwmM1);
+					System.out.println("dirM2: " + dirM2);
+					System.out.println("pwmM2: " + pwmM2);
+					System.out.println("dirM3: " + dirM3);
+					System.out.println("pwmM3: " + pwmM3);
+					break;
+				
+				case 2:
+					if (velx == 0)
+					{
+						if (vely >= 0)
+						{
+							angle = Math.PI / 2;
+						}
+						else
+						{
+							angle = -Math.PI / 2;
+						}
+					} else
+					{
+						angle = Math.atan(vely / velx);
+						if (velx < 0)
+						{
+							angle = Math.PI + angle;
+						}
+					}
+					
+					System.out.println("Velx: " + velx);
+					System.out.println("Vely: " + vely);
+					System.out.println("Vel Angular: " + velz);
+					
+					
+					// if (Math.abs(velz) < Math.abs(2)) // velocidade angular
+					// { // translação
+					
+					// if ((norma <= 0.20) && (norma >= 0.03))
+					// {
+					// norma = norma + 0.10;
+					// }
+					// if (norma <= 20 && norma >= 3)
+					// {
+					// norma = norma - 10;
+					// }
+					
+					coeficiente = 110.0;
+					System.out.println("Translação");
+					pwmM1 = (byte) Math.round(coeficiente * norma *
+							Math.cos(angle + ((7 * Math.PI) / 6)));
+					pwmM2 = (byte) Math.round(coeficiente * norma *
+							Math.cos(angle + (Math.PI / 2)));
+					pwmM3 = (byte) Math.round(coeficiente * norma *
+							Math.cos(angle + (-Math.PI / 6)));
+					
+					if ((velz > 0) && (velx == 0) && (vely == 0))
+					{
+						velz = velz + 15;
+					}
+					
+					if ((velz < 0) && (velx == 0) && (vely == 0))
+					{
+						velz = velz - 15;
+					}
+					
+					
+					pwmM1 = (byte) (pwmM1 + Math.round((velz)));
+					pwmM2 = (byte) (pwmM2 + Math.round((velz)));
+					pwmM3 = (byte) (pwmM3 + Math.round((velz)));
+					
+					// } else
+					// { // rotação
+					// System.out.println("Rotação");
+					// pwmM1 = pwmM2 = pwmM3 = (byte) Math.round(10 * velz); // a velocidade angular é (100 * velz).
+					//
+					// }
+					
+					// verificando se as rotação são invertidas
+					if (pwmM1 > 0)
+					{
+						dirM1 = 1;
+					}
+					if (pwmM2 > 0)
+					{
+						dirM2 = 1;
+					}
+					if (pwmM3 > 0)
+					{
+						dirM3 = 1;
+					}
+					
+					pwmM1 = (byte) Math.abs(pwmM1);
+					pwmM2 = (byte) Math.abs(pwmM2);
+					pwmM3 = (byte) Math.abs(pwmM3);
+					
+					// AJUSTES DE PWM //
+					// if (Math.abs(vely) > Math.abs(velx))
+					// {
+					// pwmM1 = (byte) (pwmM1 + 10);
+					// pwmM3 = (byte) (pwmM3 + 10);
+					// }
+					
+					
+					System.out.println("norma: " + norma);
+					System.out.println("angulo: " + Math.toDegrees(angle));
+					System.out.println("dirM1: " + dirM1);
+					System.out.println("pwmM1: " + pwmM1);
+					System.out.println("dirM2: " + dirM2);
+					System.out.println("pwmM2: " + pwmM2);
+					System.out.println("dirM3: " + dirM3);
+					System.out.println("pwmM3: " + pwmM3);
+					break;
+				
+				case 3:
+					if (velx == 0)
+					{
+						if (vely >= 0)
+						{
+							angle = Math.PI / 2;
+						}
+						else
+						{
+							angle = -Math.PI / 2;
+						}
+					} else
+					{
+						angle = Math.atan(vely / velx);
+						if (velx < 0)
+						{
+							angle = Math.PI + angle;
+						}
+					}
+					
+					System.out.println("Velx: " + velx);
+					System.out.println("Vely: " + vely);
+					System.out.println("Vel Angular: " + velz);
+					
+					
+					// if (Math.abs(velz) < Math.abs(2)) // velocidade angular
+					// { // translação
+					
+					// if ((norma <= 0.20) && (norma >= 0.03))
+					// {
+					// norma = norma + 0.10;
+					// }
+					// if (norma <= 20 && norma >= 3)
+					// {
+					// norma = norma - 10;
+					// }
+					
+					coeficiente = 90.0;
+					System.out.println("Translação");
+					pwmM1 = (byte) Math.round(coeficiente * norma *
+							Math.cos(angle + ((7 * Math.PI) / 6)));
+					pwmM2 = (byte) Math.round(coeficiente * norma *
+							Math.cos(angle + (Math.PI / 2)));
+					pwmM3 = (byte) Math.round(coeficiente * norma *
+							Math.cos(angle + (-Math.PI / 6)));
+					
+					if ((velz > 0) && (velx == 0) && (vely == 0))
+					{
+						velz = velz + 25;
+					}
+					
+					if ((velz < 0) && (velx == 0) && (vely == 0))
+					{
+						velz = velz - 25;
+					}
+					
+					
+					pwmM1 = (byte) (pwmM1 + Math.round((1.5 * velz)));
+					pwmM2 = (byte) (pwmM2 + Math.round((1.5 * velz)));
+					pwmM3 = (byte) (pwmM3 + Math.round((1.5 * velz)));
+					
+					// } else
+					// { // rotação
+					// System.out.println("Rotação");
+					// pwmM1 = pwmM2 = pwmM3 = (byte) Math.round(10 * velz); // a velocidade angular é (100 * velz).
+					//
+					// }
+					
+					// verificando se as rotação são invertidas
+					if (pwmM1 > 0)
+					{
+						dirM1 = 1;
+					}
+					if (pwmM2 > 0)
+					{
+						dirM2 = 1;
+					}
+					if (pwmM3 > 0)
+					{
+						dirM3 = 1;
+					}
+					
+					pwmM1 = (byte) Math.abs(pwmM1);
+					pwmM2 = (byte) Math.abs(pwmM2);
+					pwmM3 = (byte) Math.abs(pwmM3);
+					
+					// AJUSTES DE PWM //
+					// if (Math.abs(vely) > Math.abs(velx))
+					// {
+					// pwmM1 = (byte) (pwmM1 + 10);
+					// pwmM3 = (byte) (pwmM3 + 10);
+					// }
+					
+					
+					System.out.println("norma: " + norma);
+					System.out.println("angulo: " + Math.toDegrees(angle));
+					System.out.println("dirM1: " + dirM1);
+					System.out.println("pwmM1: " + pwmM1);
+					System.out.println("dirM2: " + dirM2);
+					System.out.println("pwmM2: " + pwmM2);
+					System.out.println("dirM3: " + dirM3);
+					System.out.println("pwmM3: " + pwmM3);
+					break;
+				
+				case 4:
+					if (velx == 0)
+					{
+						if (vely >= 0)
+						{
+							angle = Math.PI / 2;
+						}
+						else
+						{
+							angle = -Math.PI / 2;
+						}
+					} else
+					{
+						angle = Math.atan(vely / velx);
+						if (velx < 0)
+						{
+							angle = Math.PI + angle;
+						}
+					}
+					
+					System.out.println("Velx: " + velx);
+					System.out.println("Vely: " + vely);
+					System.out.println("Vel Angular: " + velz);
+					
+					
+					// if (Math.abs(velz) < Math.abs(2)) // velocidade angular
+					// { // translação
+					
+					// if ((norma <= 0.20) && (norma >= 0.03))
+					// {
+					// norma = norma + 0.10;
+					// }
+					// if (norma <= 20 && norma >= 3)
+					// {
+					// norma = norma - 10;
+					// }
+					
+					coeficiente = 110.0;
+					System.out.println("Translação");
+					pwmM1 = (byte) Math.round(coeficiente * norma *
+							Math.cos(angle + ((7 * Math.PI) / 6)));
+					pwmM2 = (byte) Math.round(coeficiente * norma *
+							Math.cos(angle + (Math.PI / 2)));
+					pwmM3 = (byte) Math.round(coeficiente * norma *
+							Math.cos(angle + (-Math.PI / 6)));
+					
+					if ((velz > 0) && (velx == 0) && (vely == 0))
+					{
+						velz = velz + 25;
+					}
+					
+					if ((velz < 0) && (velx == 0) && (vely == 0))
+					{
+						velz = velz - 25;
+					}
+					
+					
+					pwmM1 = (byte) (pwmM1 + Math.round((1.5 * velz)));
+					pwmM2 = (byte) (pwmM2 + Math.round((1.5 * velz)));
+					pwmM3 = (byte) (pwmM3 + Math.round((1.5 * velz)));
+					
+					// } else
+					// { // rotação
+					// System.out.println("Rotação");
+					// pwmM1 = pwmM2 = pwmM3 = (byte) Math.round(10 * velz); // a velocidade angular é (100 * velz).
+					//
+					// }
+					
+					// verificando se as rotação são invertidas
+					if (pwmM1 > 0)
+					{
+						dirM1 = 1;
+					}
+					if (pwmM2 > 0)
+					{
+						dirM2 = 1;
+					}
+					if (pwmM3 > 0)
+					{
+						dirM3 = 1;
+					}
+					
+					pwmM1 = (byte) Math.abs(pwmM1);
+					pwmM2 = (byte) Math.abs(pwmM2);
+					pwmM3 = (byte) Math.abs(pwmM3);
+					
+					// AJUSTES DE PWM //
+					// if (Math.abs(vely) > Math.abs(velx))
+					// {
+					// pwmM1 = (byte) (pwmM1 + 10);
+					// pwmM3 = (byte) (pwmM3 + 10);
+					// }
+					
+					
+					System.out.println("norma: " + norma);
+					System.out.println("angulo: " + Math.toDegrees(angle));
+					System.out.println("dirM1: " + dirM1);
+					System.out.println("pwmM1: " + pwmM1);
+					System.out.println("dirM2: " + dirM2);
+					System.out.println("pwmM2: " + pwmM2);
+					System.out.println("dirM3: " + dirM3);
+					System.out.println("pwmM3: " + pwmM3);
+					break;
+				
+				case 5:
+					if (velx == 0)
+					{
+						if (vely >= 0)
+						{
+							angle = Math.PI / 2;
+						}
+						else
+						{
+							angle = -Math.PI / 2;
+						}
+					} else
+					{
+						angle = Math.atan(vely / velx);
+						if (velx < 0)
+						{
+							angle = Math.PI + angle;
+						}
+					}
+					
+					System.out.println("Velx: " + velx);
+					System.out.println("Vely: " + vely);
+					System.out.println("Vel Angular: " + velz);
+					
+					
+					// if (Math.abs(velz) < Math.abs(2)) // velocidade angular
+					// { // translação
+					
+					// if ((norma <= 0.20) && (norma >= 0.03))
+					// {
+					// norma = norma + 0.10;
+					// }
+					// if (norma <= 20 && norma >= 3)
+					// {
+					// norma = norma - 10;
+					// }
+					
+					coeficiente = 100.0;
+					System.out.println("Translação");
+					pwmM1 = (byte) Math.round(coeficiente * norma *
+							Math.cos(angle + ((7 * Math.PI) / 6)));
+					pwmM2 = (byte) Math.round(coeficiente * norma *
+							Math.cos(angle + (Math.PI / 2)));
+					pwmM3 = (byte) Math.round(coeficiente * norma *
+							Math.cos(angle + (-Math.PI / 6)));
+					
+					if ((velz > 0) && (velx == 0) && (vely == 0))
+					{
+						velz = velz + 15;
+					}
+					
+					if ((velz < 0) && (velx == 0) && (vely == 0))
+					{
+						velz = velz - 15;
+					}
+					
+					
+					pwmM1 = (byte) (pwmM1 + Math.round((velz)));
+					pwmM2 = (byte) (pwmM2 + Math.round((velz)));
+					pwmM3 = (byte) (pwmM3 + Math.round((velz)));
+					
+					// } else
+					// { // rotação
+					// System.out.println("Rotação");
+					// pwmM1 = pwmM2 = pwmM3 = (byte) Math.round(10 * velz); // a velocidade angular é (100 * velz).
+					//
+					// }
+					
+					// verificando se as rotação são invertidas
+					if (pwmM1 > 0)
+					{
+						dirM1 = 1;
+					}
+					if (pwmM2 > 0)
+					{
+						dirM2 = 1;
+					}
+					if (pwmM3 > 0)
+					{
+						dirM3 = 1;
+					}
+					
+					pwmM1 = (byte) Math.abs(pwmM1);
+					pwmM2 = (byte) Math.abs(pwmM2);
+					pwmM3 = (byte) Math.abs(pwmM3);
+					
+					// AJUSTES DE PWM //
+					// if (Math.abs(vely) > Math.abs(velx))
+					// {
+					// pwmM1 = (byte) (pwmM1 + 10);
+					// pwmM3 = (byte) (pwmM3 + 10);
+					// }
+					
+					
+					System.out.println("norma: " + norma);
+					System.out.println("angulo: " + Math.toDegrees(angle));
+					System.out.println("dirM1: " + dirM1);
+					System.out.println("pwmM1: " + pwmM1);
+					System.out.println("dirM2: " + dirM2);
+					System.out.println("pwmM2: " + pwmM2);
+					System.out.println("dirM3: " + dirM3);
+					System.out.println("pwmM3: " + pwmM3);
+					break;
+				
+				
+				default:
+					pwmM1 = 0;
+					dirM1 = 0;
+					pwmM2 = 0;
+					dirM2 = 0;
+					pwmM3 = 0;
+					dirM3 = 0;
+			}
+			
+			// if ((id == 2) /* && (teamYellow == true) */) // codificaçao do robô
+			// {
+			//
+			// } else
+			// {
+			//
+			// }
+			
+			// if (spinner)
+			// {
+			// drible = 1;
+			// }
+			// else
+			// {
+			// drible = 0;
+			// }
 			drible = 0;
+			chute = 0;
 			bateria = 0;
+			
 			byte ultimo = (byte) (chute + (4 * drible) + (8 * bateria));
 			byte M1 = (byte) ((dirM1 * 128) + pwmM1);
 			byte M2 = (byte) ((dirM2 * 128) + pwmM2);
@@ -416,20 +999,32 @@ public class GrSimConnection
 			arrayBytes[3] = M3;
 			arrayBytes[4] = ultimo;
 			
-			for (int i = 0; i < 5; i++)
-			{
-				System.out.println(arrayBytes[i]);
-			}
+			// for (int i = 0; i < 5; i++)
+			// {
+			// System.out.println(arrayBytes[i]);
+			// }
 			System.out.println();
-			serialPort.writeBytes(arrayBytes);
-			System.out.println("enviado");
-			serialPort.closePort();
-			// Thread.sleep(50);
+			// if (id == 0)
+			// {
+			Sumatra.serialPort.purgePort(SerialPort.PURGE_RXCLEAR); // PURGE_RXCLEAR: input buffer
+			Sumatra.serialPort.purgePort(SerialPort.PURGE_TXCLEAR);
+			Sumatra.serialPort.writeBytes(arrayBytes);
+			// } else if (id == 1)
+			// {
+			// Sumatra.serialPort2.purgePort(SerialPort.PURGE_RXCLEAR);
+			// Sumatra.serialPort2.purgePort(SerialPort.PURGE_TXCLEAR);
+			// Sumatra.serialPort.writeBytes(arrayBytes);
+			// }
+			
+			
+			// System.out.println("enviado");
+			Thread.sleep(50);
+			log.debug("teste");
 		} catch (Exception e)
 		{
-			e.printStackTrace();
+			GregorianCalendar gc = new GregorianCalendar();
+			log.debug(gc.getTime().toString() + "\n" + e.getMessage());
 		}
-		
 	}
 	
 	

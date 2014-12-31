@@ -4,7 +4,6 @@
  * Project: TIGERS - Sumatra
  * Date: Nov 10, 2012
  * Author(s): Nicolai Ommer <nicolai.ommer@gmail.com>
- * 
  * *********************************************************
  */
 package edu.dhbw.mannheim.tigers.sumatra.model.modules.impls.ai.pandora.conditions;
@@ -19,11 +18,10 @@ import edu.dhbw.mannheim.tigers.sumatra.model.modules.impls.ai.pandora.AConditio
  * It is used for quite a dirty workaround in a JTable :P
  * 
  * @author Nicolai Ommer <nicolai.ommer@gmail.com>
- * 
  */
 public class DummyCondition extends ACondition
 {
-	
+	// DAFUQ GAMBIARRA
 	
 	// --------------------------------------------------------------------------
 	// --- variables and constants ----------------------------------------------
@@ -38,7 +36,7 @@ public class DummyCondition extends ACondition
 	/**
 	 * @param type
 	 */
-	public DummyCondition(ECondition type)
+	public DummyCondition(final ECondition type)
 	{
 		super(type);
 	}
@@ -49,14 +47,14 @@ public class DummyCondition extends ACondition
 	// --------------------------------------------------------------------------
 	
 	@Override
-	protected EConditionState doCheckCondition(SimpleWorldFrame worldFrame, BotID botId)
+	protected EConditionState doCheckCondition(final SimpleWorldFrame worldFrame, final BotID botId)
 	{
 		return EConditionState.PENDING;
 	}
 	
 	
 	@Override
-	protected boolean compareContent(ACondition condition)
+	protected boolean compareContent(final ACondition condition)
 	{
 		return false;
 	}
